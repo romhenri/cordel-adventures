@@ -15,6 +15,11 @@ run/main_scene="res://scenes/test-scene.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
+[debug]
+
+shapes/navigation/agent_path_color=Color(1, 0, 0, 0.368627)
+shapes/collision/contact_color=Color(1, 0.2, 0.101961, 0.415686)
+
 [rendering]
 
 renderer/rendering_method="mobile"
