@@ -10,16 +10,22 @@ radius = 433.346
 size = Vector2(226.667, 263.333)
 
 [node name="test-player" type="CharacterBody2D"]
-scale = Vector2(0.3, 0.3)
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(0.3, 0.270494)
+collision_mask = 7
 script = ExtResource("1_0bt2r")
 
 [node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(-34.1667, -179.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_beq7s")
 debug_color = Color(0.607843, 0.529412, 0.278431, 0)
 
 [node name="PossibleAttackArea" type="Area2D" parent="."]
+position = Vector2(-34.1667, -179.5)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PossibleAttackArea"]
 visible = false
@@ -27,11 +33,12 @@ modulate = Color(1, 0.2, 0.101961, 0.337255)
 polygon = PackedVector2Array(0, 0, -310, -306.667, -400, -173.333, -436.667, -3.33333, -400, 166.667, -323.333, 280)
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(33.3333, 178.333)
+y_sort_enabled = true
+position = Vector2(-0.833359, -1.16702)
 shape = SubResource("RectangleShape2D_7c2b5")
 
 [node name="Texture" type="Sprite2D" parent="."]
-position = Vector2(-3, -7)
+position = Vector2(-37.1667, -186.5)
 texture = ExtResource("1_s4n7q")
 
 [node name="Camera" type="Camera2D" parent="."]
