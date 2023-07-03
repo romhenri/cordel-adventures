@@ -33,3 +33,5 @@ shape = SubResource("RectangleShape2D_7c2b5")
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(-3, -7)
 texture = ExtResource("1_s4n7q")
+
+[node name="Camera" type="Camera2D" parent="."]
