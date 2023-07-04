@@ -6,4 +6,7 @@
 scale = Vector2(0.3, 0.3)
 
 [node name="texture" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
 texture = ExtResource("1_bp5r5")
+offset = Vector2(0, -80)

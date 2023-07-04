@@ -3,20 +3,28 @@
 [ext_resource type="Script" path="res://scripts/test_player.gd" id="1_0bt2r"]
 [ext_resource type="Texture2D" uid="uid://cmk2p6qwaduq4" path="res://assets/characters/test-player.png" id="1_s4n7q"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c2b5"]
+size = Vector2(269.167, 133.09)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_beq7s"]
 radius = 433.346
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c2b5"]
-size = Vector2(269.167, 254.544)
 
 [node name="test-player" type="CharacterBody2D"]
 z_as_relative = false
 y_sort_enabled = true
-scale = Vector2(0.3, 0.270494)
+scale = Vector2(0.297404, 0.270494)
 collision_mask = 6
 script = ExtResource("1_0bt2r")
 
+[node name="Collision" type="CollisionShape2D" parent="."]
+z_as_relative = false
+position = Vector2(0, -3.69694)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7c2b5")
+debug_color = Color(0, 0.6, 0.7, 0.42)
+
 [node name="AttackArea" type="Area2D" parent="."]
+visible = false
 position = Vector2(0, -179.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
@@ -25,23 +33,19 @@ shape = SubResource("CircleShape2D_beq7s")
 debug_color = Color(0.607843, 0.529412, 0.278431, 0)
 
 [node name="PossibleAttackArea" type="Area2D" parent="."]
-position = Vector2(0, -179.5)
+visible = false
+position = Vector2(0, -180)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PossibleAttackArea"]
 modulate = Color(1, 0.2, 0.101961, 0.0941176)
 polygon = PackedVector2Array(0, 0, -310, -306.667, -400, -173.333, -436.667, -3.33333, -400, 166.667, -323.333, 280)
 
-[node name="Collision" type="CollisionShape2D" parent="."]
-y_sort_enabled = true
-position = Vector2(0, -20.6055)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_7c2b5")
-debug_color = Color(0, 0.6, 0.7, 0.42)
-
 [node name="Texture" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(0, -186.5)
-scale = Vector2(0.997262, 1)
+scale = Vector2(0.98122, 1)
 texture = ExtResource("1_s4n7q")
-offset = Vector2(0, -40)
+offset = Vector2(0, -80)
 
 [node name="Camera" type="Camera2D" parent="."]

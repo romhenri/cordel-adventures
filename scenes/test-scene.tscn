@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://d24kw2t2kq77t"]
 
 [ext_resource type="Texture2D" uid="uid://c2a7oukshv0br" path="res://assets/terrain/grass-v2.png" id="1_y1td4"]
-[ext_resource type="Texture2D" uid="uid://bubx4aoscltuh" path="res://assets/terrain/test-grass.png" id="2_qbb1p"]
 [ext_resource type="PackedScene" uid="uid://co3ojtsmvmtrw" path="res://active/test_player.tscn" id="2_u4uso"]
+[ext_resource type="Texture2D" uid="uid://bdj0ub8f7rimy" path="res://assets/terrain/grass.png" id="2_v6p8p"]
 [ext_resource type="PackedScene" uid="uid://den7asokmsl0m" path="res://active/decoration/cac01.tscn" id="3_1h5wu"]
 [ext_resource type="PackedScene" uid="uid://c6ee3qdgopul6" path="res://active/decoration/cac02.tscn" id="5_xktpo"]
 [ext_resource type="PackedScene" uid="uid://cfwkrkjo1xhqf" path="res://active/decoration/tree01.tscn" id="7_5vi8i"]
@@ -33,7 +33,7 @@ tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_ek0xj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k60yx"]
-texture = ExtResource("2_qbb1p")
+texture = ExtResource("2_v6p8p")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -97,19 +97,24 @@ position = Vector2(779, 252)
 scale = Vector2(0.198835, 0.2)
 
 [node name="cac01" parent="terrain/decoration" instance=ExtResource("3_1h5wu")]
+y_sort_enabled = true
 position = Vector2(437, 108)
 
 [node name="cac02" parent="terrain/decoration" instance=ExtResource("5_xktpo")]
-position = Vector2(925, 479)
+y_sort_enabled = true
+position = Vector2(922, 542)
 
 [node name="cac01-02" parent="terrain/decoration" instance=ExtResource("3_1h5wu")]
-position = Vector2(433, 522)
+y_sort_enabled = true
+position = Vector2(431, 541)
 
 [node name="cac01-03" parent="terrain/decoration" instance=ExtResource("3_1h5wu")]
+y_sort_enabled = true
 position = Vector2(1257, 37)
 
 [node name="test-player" parent="." instance=ExtResource("2_u4uso")]
 position = Vector2(598, 351)
+scale = Vector2(0.310546, 0.270494)
 
 [node name="test_homemboi" parent="." instance=ExtResource("7_owx8x")]
 position = Vector2(1085, 105)
