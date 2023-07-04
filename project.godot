@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [debug]
 
 shapes/navigation/agent_path_color=Color(1, 0, 0, 0.368627)
+shapes/collision/shape_color=Color(0, 0.6, 0.701961, 0.223529)
 shapes/collision/contact_color=Color(1, 0.2, 0.101961, 0.415686)
 
 [input]

@@ -19,10 +19,13 @@ func move() -> void:
 	
 	print(direction)
 	
-	if (direction.x > 0): 
+	if (direction.x == 0 and direction.y): 
+		pass
+	elif (direction.x > 0): 
 		texture.flip_h = true
-	if (direction.x == 0): 
+	elif (direction.x < 0):
 		texture.flip_h = false
+	
 	
 	
 	velocity = direction * move_speed

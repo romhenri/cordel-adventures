@@ -3,24 +3,23 @@
 [ext_resource type="Texture2D" uid="uid://4jqxmycb684m" path="res://assets/decoration/1688354677516.png" id="1_8egan"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnis8"]
-size = Vector2(103, 35)
+size = Vector2(430.989, 190)
 
-[node name="tree01" type="Node2D"]
-y_sort_enabled = true
-
-[node name="texture" type="Sprite2D" parent="."]
+[node name="tree01" type="Sprite2D"]
 y_sort_enabled = true
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_8egan")
-offset = Vector2(0, -850)
+offset = Vector2(0, -1000)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(7, -37)
-scale = Vector2(1.00247, 1)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(43.0497, 6.625)
+scale = Vector2(1.01533, 1)
 collision_layer = 4
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 y_sort_enabled = true
-position = Vector2(0, 68)
+position = Vector2(0, -16.625)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jnis8")
+debug_color = Color(0, 0.6, 0.7, 0.42)
