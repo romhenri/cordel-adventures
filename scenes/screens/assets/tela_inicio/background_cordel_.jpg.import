@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdgrhf0xfrsls"
-path="res://.godot/imported/fundo-alternativo2.jpg-8e22b44ed3940899f275882a78bf1c92.ctex"
+uid="uid://dulhuakoxq3r0"
+path="res://.godot/imported/background_cordel_.jpg-e190b694e907935faed0bca7a9a5a3b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/screens/assets/tela_inicio/fundo-alternativo2.jpg"
-dest_files=["res://.godot/imported/fundo-alternativo2.jpg-8e22b44ed3940899f275882a78bf1c92.ctex"]
+source_file="res://scenes/screens/assets/tela_inicio/background_cordel_.jpg"
+dest_files=["res://.godot/imported/background_cordel_.jpg-e190b694e907935faed0bca7a9a5a3b0.ctex"]
 
 [params]
 

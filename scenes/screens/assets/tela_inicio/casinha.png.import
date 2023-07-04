@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crr2vglxgjph"
-path="res://.godot/imported/cacto.png-ccf460a9aa136fc5b36eb921e60e1fb5.ctex"
+uid="uid://dhso7tcdbe77"
+path="res://.godot/imported/casinha.png-6f73729cc42d82823d79208fad00c76f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/screens/assets/tela_inicio/cacto.png"
-dest_files=["res://.godot/imported/cacto.png-ccf460a9aa136fc5b36eb921e60e1fb5.ctex"]
+source_file="res://scenes/screens/assets/tela_inicio/casinha.png"
+dest_files=["res://.godot/imported/casinha.png-6f73729cc42d82823d79208fad00c76f.ctex"]
 
 [params]
 

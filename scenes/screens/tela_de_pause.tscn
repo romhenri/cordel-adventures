@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://clerpynu4jura" path="res://scenes/screens/assets/tela_pause/Projeto_20230628074651.jpg" id="1_441ee"]
 [ext_resource type="Script" path="res://scenes/screens/tela_de_pause.gd" id="1_i06mb"]
+[ext_resource type="Texture2D" uid="uid://cj4i5thq41gyu" path="res://scenes/screens/assets/tela_pause/placa3-fundo-claro.png" id="3_m7vhk"]
 [ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/Cordel Encarnado II.otf" id="3_pg8um"]
-[ext_resource type="Texture2D" uid="uid://dthdr6q1qhoa7" path="res://scenes/screens/assets/tela_pause/placa3.png" id="4_a1jqq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rw6a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -43,9 +43,9 @@ texture = ExtResource("1_441ee")
 format = 2
 
 [node name="Placa3" type="Sprite2D" parent="TileMap2"]
-position = Vector2(575, 317)
-scale = Vector2(0.443333, 0.411017)
-texture = ExtResource("4_a1jqq")
+position = Vector2(574, 317)
+scale = Vector2(0.756218, 0.645723)
+texture = ExtResource("3_m7vhk")
 
 [node name="botoes" type="VBoxContainer" parent="TileMap2"]
 anchors_preset = 9
@@ -56,7 +56,7 @@ offset_right = 633.0
 offset_bottom = 359.0
 grow_vertical = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 10
+theme_override_constants/separation = 15
 
 [node name="Label" type="Label" parent="TileMap2/botoes"]
 layout_mode = 2
