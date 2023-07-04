@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://d24kw2t2kq77t"]
+[gd_scene load_steps=14 format=3 uid="uid://d24kw2t2kq77t"]
 
 [ext_resource type="Texture2D" uid="uid://c2a7oukshv0br" path="res://assets/terrain/grass-v2.png" id="1_y1td4"]
 [ext_resource type="Texture2D" uid="uid://bubx4aoscltuh" path="res://assets/terrain/test-grass.png" id="2_qbb1p"]
 [ext_resource type="PackedScene" uid="uid://co3ojtsmvmtrw" path="res://active/test_player.tscn" id="2_u4uso"]
 [ext_resource type="PackedScene" uid="uid://den7asokmsl0m" path="res://active/decoration/cac01.tscn" id="3_1h5wu"]
+[ext_resource type="Texture2D" uid="uid://4jqxmycb684m" path="res://assets/decoration/1688354677516.png" id="5_l0648"]
 [ext_resource type="PackedScene" uid="uid://c6ee3qdgopul6" path="res://active/decoration/cac02.tscn" id="5_xktpo"]
-[ext_resource type="PackedScene" uid="uid://cfwkrkjo1xhqf" path="res://active/decoration/tree01.tscn" id="6_r1bhh"]
+[ext_resource type="PackedScene" uid="uid://dcsy0qy4v85q8" path="res://active/test_homemboi.tscn" id="7_owx8x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ek0xj"]
 texture = ExtResource("1_y1td4")
@@ -58,6 +59,9 @@ sources/1 = SubResource("TileSetAtlasSource_k60yx")
 [sub_resource type="TileSet" id="TileSet_kr88b"]
 tile_size = Vector2i(64, 64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnis8"]
+size = Vector2(103, 35)
+
 [node name="test-scene" type="Node2D"]
 y_sort_enabled = true
 
@@ -95,9 +99,31 @@ position = Vector2(433, 522)
 [node name="cac01-03" parent="terrain/decoration" instance=ExtResource("3_1h5wu")]
 position = Vector2(1257, 37)
 
-[node name="tree01" parent="terrain/decoration" instance=ExtResource("6_r1bhh")]
+[node name="tree01" type="Node2D" parent="terrain/decoration"]
+y_sort_enabled = true
 position = Vector2(751, 317)
+scale = Vector2(0.997306, 0.984955)
+
+[node name="texture" type="Sprite2D" parent="terrain/decoration/tree01"]
+y_sort_enabled = true
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_l0648")
+offset = Vector2(0, -850)
+
+[node name="Area2D" type="Area2D" parent="terrain/decoration/tree01"]
+position = Vector2(8.02161, -39.5957)
+scale = Vector2(1.03824, 1)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="terrain/decoration/tree01/Area2D"]
+y_sort_enabled = true
+position = Vector2(0, 68)
+shape = SubResource("RectangleShape2D_jnis8")
 
 [node name="test-player" parent="." instance=ExtResource("2_u4uso")]
 position = Vector2(598, 351)
-collision_mask = 0
+
+[node name="test_homemboi" parent="." instance=ExtResource("7_owx8x")]
+position = Vector2(1085, 105)
+scale = Vector2(1.01599, 1)

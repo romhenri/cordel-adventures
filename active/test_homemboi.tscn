@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcsy0qy4v85q8"]
+
+[ext_resource type="Texture2D" uid="uid://dta7yjbxt3nlg" path="res://assets/characters/homem-boi.png" id="1_b2c16"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmc6h"]
+size = Vector2(84.7501, 74)
+
+[node name="test_homemboi" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_kmc6h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_b2c16")
+offset = Vector2(0, -130)

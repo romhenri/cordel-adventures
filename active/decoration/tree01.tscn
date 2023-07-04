@@ -16,8 +16,9 @@ offset = Vector2(0, -850)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(7, -37)
-scale = Vector2(0.99711, 1)
-collision_layer = 2
+scale = Vector2(1.00247, 1)
+collision_layer = 4
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 y_sort_enabled = true

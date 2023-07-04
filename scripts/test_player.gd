@@ -15,7 +15,16 @@ func _physics_process(_delta: float) -> void:
 
 func move() -> void:
 	var direction: Vector2 = get_direction()
-	# print(direction)
+	
+	
+	print(direction)
+	
+	if (direction.x > 0): 
+		texture.flip_h = true
+	if (direction.x == 0): 
+		texture.flip_h = false
+	
+	
 	velocity = direction * move_speed
 	move_and_slide()
 	
