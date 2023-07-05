@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crr2vglxgjph"
-path="res://.godot/imported/cacto.png-ccf460a9aa136fc5b36eb921e60e1fb5.ctex"
+uid="uid://sejxv628n2xe"
+path="res://.godot/imported/lapide-removebg-preview.png-f0b7776e6287da38678955112fc53961.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/screens/assets/tela_inicio/cacto.png"
-dest_files=["res://.godot/imported/cacto.png-ccf460a9aa136fc5b36eb921e60e1fb5.ctex"]
+source_file="res://scenes/screens/assets/tela_morte/lapide-removebg-preview.png"
+dest_files=["res://.godot/imported/lapide-removebg-preview.png-f0b7776e6287da38678955112fc53961.ctex"]
 
 [params]
 
