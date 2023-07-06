@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqfkplsho50oq"]
+
+[ext_resource type="Texture2D" uid="uid://dsb236oqqn68p" path="res://scenes/screens/assets/tela_vitoria/background_cordel_faixa.jpg" id="1_gq3hj"]
+[ext_resource type="Script" path="res://scenes/screens/tela_vitoria.gd" id="1_idocf"]
+[ext_resource type="Texture2D" uid="uid://d117c0qwy3hms" path="res://scenes/screens/assets/tela_vitoria/butija.png" id="2_q31qb"]
+[ext_resource type="Texture2D" uid="uid://bk5j1yxwdlfpi" path="res://scenes/screens/assets/tela_inicio/OBrabo2.png" id="3_il453"]
+[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/Cordel Encarnado II.otf" id="4_s8hmq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nux5i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tqwtb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2x21"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50evc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sv40r"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="tela_vitoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_idocf")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="BackgroundCordel" type="Sprite2D" parent="TileMap"]
+position = Vector2(576, 324.5)
+scale = Vector2(0.467017, 0.430388)
+texture = ExtResource("1_gq3hj")
+
+[node name="Butija" type="Sprite2D" parent="TileMap"]
+position = Vector2(162, 322)
+scale = Vector2(0.463024, 0.478416)
+texture = ExtResource("2_q31qb")
+
+[node name="OBrabo2" type="Sprite2D" parent="TileMap"]
+position = Vector2(986, 202)
+scale = Vector2(0.276188, 0.276188)
+texture = ExtResource("3_il453")
+
+[node name="Label" type="Label" parent="TileMap"]
+offset_left = 394.0
+offset_top = 252.0
+offset_right = 714.0
+offset_bottom = 340.0
+rotation = -0.0620555
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s8hmq")
+theme_override_font_sizes/font_size = 80
+text = "VITÓRIA!"
+
+[node name="Label2" type="Label" parent="TileMap"]
+offset_left = 320.0
+offset_top = 366.0
+offset_right = 882.0
+offset_bottom = 412.0
+rotation = -0.0954843
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s8hmq")
+theme_override_font_sizes/font_size = 35
+text = "Ganhar é sua especialidade!"
+
+[node name="continuar" type="Button" parent="TileMap"]
+offset_left = 933.0
+offset_top = 557.0
+offset_right = 1102.0
+offset_bottom = 598.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s8hmq")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_nux5i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tqwtb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d2x21")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_50evc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sv40r")
+text = "Continuar"
