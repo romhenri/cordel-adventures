@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var texture: Sprite2D = get_node("Texture")
 @onready var collision: CollisionShape2D = get_node("Collision")
+@onready var animation: AnimationPlayer = get_node("Animation")
 
 @export var move_speed: float = 256.0
 
@@ -22,15 +23,17 @@ func move() -> void:
 	if (direction.x == 0 and direction.y): 
 		pass
 	elif (direction.x > 0): 
-		texture.flip_h = true
-	elif (direction.x < 0):
 		texture.flip_h = false
+	elif (direction.x < 0):
+		texture.flip_h = true
 	
-	
+	if (direction.x != 0 || direction.y != 0): 
+		animation.play("test-run")
+	else:
+		animation.play("test-idle")
 	
 	velocity = direction * move_speed
 	move_and_slide()
-	
 
 func get_direction() -> Vector2:
 	return Vector2(
