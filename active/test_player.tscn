@@ -178,12 +178,11 @@ _data = {
 z_as_relative = false
 y_sort_enabled = true
 scale = Vector2(0.297404, 0.270494)
-collision_mask = 6
+collision_mask = 30
 script = ExtResource("1_0bt2r")
 move_speed = 326.0
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-visible = false
 z_as_relative = false
 position = Vector2(0, -3.69694)
 shape = SubResource("RectangleShape2D_7c2b5")
