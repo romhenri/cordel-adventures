@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://dqbyo5mwcf02x" path="res://assets/decoration/1688354677422.png" id="1_bp5r5"]
 
 [node name="cac01" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
 scale = Vector2(0.3, 0.3)
 
 [node name="texture" type="Sprite2D" parent="."]
