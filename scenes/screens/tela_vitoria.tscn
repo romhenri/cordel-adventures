@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://cqfkplsho50oq"]
 
-[ext_resource type="Texture2D" uid="uid://dsb236oqqn68p" path="res://scenes/screens/assets/tela_vitoria/background_cordel_faixa.jpg" id="1_gq3hj"]
 [ext_resource type="Script" path="res://scenes/screens/tela_vitoria.gd" id="1_idocf"]
-[ext_resource type="Texture2D" uid="uid://d117c0qwy3hms" path="res://scenes/screens/assets/tela_vitoria/butija.png" id="2_q31qb"]
-[ext_resource type="Texture2D" uid="uid://bk5j1yxwdlfpi" path="res://scenes/screens/assets/tela_inicio/OBrabo2.png" id="3_il453"]
+[ext_resource type="Texture2D" uid="uid://co2t58ks35nnt" path="res://scenes/screens/assets/tela_vitoria/background_marrom.png" id="2_rq0gh"]
+[ext_resource type="Texture2D" uid="uid://benm2x2u5te3d" path="res://scenes/screens/assets/tela_vitoria/OBrabo2.png" id="3_oqm3y"]
+[ext_resource type="Texture2D" uid="uid://bt3mhyuwhnwhd" path="res://scenes/screens/assets/tela_vitoria/butija2.png" id="4_mtjvf"]
 [ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/Cordel Encarnado II.otf" id="4_s8hmq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nux5i"]
@@ -34,25 +34,25 @@ script = ExtResource("1_idocf")
 format = 2
 
 [node name="BackgroundCordel" type="Sprite2D" parent="TileMap"]
-position = Vector2(576, 324.5)
+position = Vector2(575, 323)
 scale = Vector2(0.467017, 0.430388)
-texture = ExtResource("1_gq3hj")
-
-[node name="Butija" type="Sprite2D" parent="TileMap"]
-position = Vector2(162, 322)
-scale = Vector2(0.463024, 0.478416)
-texture = ExtResource("2_q31qb")
+texture = ExtResource("2_rq0gh")
 
 [node name="OBrabo2" type="Sprite2D" parent="TileMap"]
-position = Vector2(986, 202)
+position = Vector2(982, 225)
 scale = Vector2(0.276188, 0.276188)
-texture = ExtResource("3_il453")
+texture = ExtResource("3_oqm3y")
+
+[node name="Butija2" type="Sprite2D" parent="TileMap"]
+position = Vector2(169, 344)
+scale = Vector2(0.550221, 0.550221)
+texture = ExtResource("4_mtjvf")
 
 [node name="Label" type="Label" parent="TileMap"]
-offset_left = 394.0
-offset_top = 252.0
-offset_right = 714.0
-offset_bottom = 340.0
+offset_left = 399.0
+offset_top = 284.0
+offset_right = 719.0
+offset_bottom = 372.0
 rotation = -0.0620555
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_s8hmq")
@@ -60,10 +60,10 @@ theme_override_font_sizes/font_size = 80
 text = "VITÓRIA!"
 
 [node name="Label2" type="Label" parent="TileMap"]
-offset_left = 320.0
-offset_top = 366.0
-offset_right = 882.0
-offset_bottom = 412.0
+offset_left = 328.0
+offset_top = 398.0
+offset_right = 890.0
+offset_bottom = 444.0
 rotation = -0.0954843
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_s8hmq")
