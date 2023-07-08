@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://c2umrjaaexg8d" path="res://assets/terrain/dark-grass.png" id="1_lieis"]
 [ext_resource type="Texture2D" uid="uid://c2a7oukshv0br" path="res://assets/terrain/grass-v2.png" id="1_y1td4"]
+[ext_resource type="Shader" path="res://manegement/shaders/dropshadow.gdshader" id="2_hvr6f"]
 [ext_resource type="PackedScene" uid="uid://co3ojtsmvmtrw" path="res://active/characters/test_player.tscn" id="2_u4uso"]
 [ext_resource type="Texture2D" uid="uid://bdj0ub8f7rimy" path="res://assets/terrain/grass.png" id="2_v6p8p"]
-[ext_resource type="Shader" path="res://active/shaders/dropshadow.gdshader" id="3_s4qtw"]
 [ext_resource type="Texture2D" uid="uid://dl15p7lfk7nun" path="res://assets/terrain/void-layer.png" id="3_uwpok"]
 [ext_resource type="PackedScene" uid="uid://c6ee3qdgopul6" path="res://active/decoration/cac02.tscn" id="5_xktpo"]
 [ext_resource type="Texture2D" uid="uid://yx77h3v6xf84" path="res://assets/decoration/cactus.png" id="6_i0s6l"]
@@ -36,7 +36,7 @@ tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_bcuh3")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_osr10"]
-shader = ExtResource("3_s4qtw")
+shader = ExtResource("2_hvr6f")
 shader_parameter/radius = 1.0
 shader_parameter/modulate = null
 

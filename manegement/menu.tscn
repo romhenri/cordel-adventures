@@ -1,0 +1,208 @@
+[gd_scene load_steps=18 format=3 uid="uid://d2l4kvh61o4cw"]
+
+[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/Cordel Encarnado II.otf" id="1_qnp55"]
+[ext_resource type="Script" path="res://scripts/menu-screen.gd" id="1_vixsm"]
+[ext_resource type="Texture2D" uid="uid://dulhuakoxq3r0" path="res://scenes/screens/assets/menu-screen/background_cordel_.jpg" id="3_w64dh"]
+[ext_resource type="Texture2D" uid="uid://bk5j1yxwdlfpi" path="res://scenes/screens/assets/menu-screen/OBrabo2.png" id="4_fwsgg"]
+[ext_resource type="Texture2D" uid="uid://do8u2ai7eshad" path="res://scenes/screens/assets/menu-screen/nuvens.png" id="6_vfkwp"]
+[ext_resource type="Texture2D" uid="uid://bvgn0l5quf5e0" path="res://scenes/screens/assets/menu-screen/nuvem2.png" id="7_fotal"]
+[ext_resource type="Texture2D" uid="uid://dinqnd5aqh8p" path="res://scenes/screens/assets/menu-screen/passaro1.png" id="8_5skm0"]
+[ext_resource type="Texture2D" uid="uid://bbxvp7elwgx3a" path="res://scenes/screens/assets/menu-screen/passaro2.png" id="9_whwp3"]
+[ext_resource type="Texture2D" uid="uid://gusl522l0a15" path="res://scenes/screens/assets/menu-screen/passaro3.png" id="10_uug40"]
+[ext_resource type="Texture2D" uid="uid://lv1va0xk1v7w" path="res://scenes/screens/assets/menu-screen/chapeu.png" id="11_3rwcp"]
+[ext_resource type="Texture2D" uid="uid://dhso7tcdbe77" path="res://scenes/screens/assets/menu-screen/casinha.png" id="12_xguqt"]
+[ext_resource type="Texture2D" uid="uid://du10we8norh35" path="res://scenes/screens/assets/menu-screen/cacto_com_frutinhas2.png" id="13_skhub"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoga"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dy63"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu43n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khco5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70wih"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="telaInicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = -2.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vixsm")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+self_modulate = Color(0.960784, 0.909804, 0.854902, 1)
+position = Vector2(574, 323.5)
+scale = Vector2(0.466208, 0.433066)
+texture = ExtResource("3_w64dh")
+
+[node name="Label" type="Label" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 133.0
+offset_top = 194.0
+offset_right = 1029.0
+offset_bottom = 321.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 90
+text = "Cordel Adventures
+"
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Obrabo" type="Sprite2D" parent="TileMap"]
+position = Vector2(871, 537)
+scale = Vector2(0.185794, 0.155471)
+texture = ExtResource("4_fwsgg")
+
+[node name="Nuvens2" type="Sprite2D" parent="TileMap"]
+position = Vector2(835, 137)
+scale = Vector2(1.35, 1.35)
+texture = ExtResource("6_vfkwp")
+
+[node name="Nuvens3" type="Sprite2D" parent="TileMap"]
+position = Vector2(778.294, 366)
+scale = Vector2(0.816869, 0.8)
+texture = ExtResource("6_vfkwp")
+
+[node name="Nuvens7" type="Sprite2D" parent="TileMap"]
+position = Vector2(72, 61)
+scale = Vector2(1.31667, 1.31667)
+texture = ExtResource("6_vfkwp")
+
+[node name="Nuvem2" type="Sprite2D" parent="TileMap"]
+position = Vector2(322, 142)
+texture = ExtResource("7_fotal")
+
+[node name="Nuvem3" type="Sprite2D" parent="TileMap"]
+position = Vector2(1056, 51)
+texture = ExtResource("7_fotal")
+
+[node name="Nuvem4" type="Sprite2D" parent="TileMap"]
+position = Vector2(232, 376)
+scale = Vector2(0.738938, 0.738938)
+texture = ExtResource("7_fotal")
+
+[node name="Passaro1" type="Sprite2D" parent="TileMap"]
+position = Vector2(1059, 314)
+texture = ExtResource("8_5skm0")
+
+[node name="Passaro2" type="Sprite2D" parent="TileMap"]
+position = Vector2(93.4894, 187.25)
+scale = Vector2(1.47872, 1.47872)
+texture = ExtResource("9_whwp3")
+
+[node name="Passaro3" type="Sprite2D" parent="TileMap"]
+position = Vector2(586, 182)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("10_uug40")
+
+[node name="Chapeu" type="Sprite2D" parent="TileMap"]
+position = Vector2(1014, 209)
+rotation = 0.286585
+scale = Vector2(0.644324, 0.644324)
+texture = ExtResource("11_3rwcp")
+
+[node name="Nuvens" type="Sprite2D" parent="TileMap"]
+position = Vector2(575, 74)
+scale = Vector2(1.36667, 1.36667)
+texture = ExtResource("6_vfkwp")
+
+[node name="Casinha" type="Sprite2D" parent="TileMap"]
+position = Vector2(480, 343)
+scale = Vector2(0.891335, 1.005)
+texture = ExtResource("12_xguqt")
+
+[node name="CactoComFrutinhas2" type="Sprite2D" parent="TileMap"]
+position = Vector2(1034, 491)
+scale = Vector2(0.319544, 0.310352)
+texture = ExtResource("13_skhub")
+
+[node name="controles" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -5.5
+offset_right = 114.0
+offset_bottom = 175.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 23
+
+[node name="iniciar" type="Button" parent="controles"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Créditos")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Iniciar"
+
+[node name="Carregar" type="Button" parent="controles"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Carregar"
+
+[node name="Configurações" type="Button" parent="controles"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Configurações"
+
+[node name="Créditos" type="Button" parent="controles"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../iniciar")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("1_qnp55")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+text = "Créditos"
