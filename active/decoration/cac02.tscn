@@ -1,10 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6ee3qdgopul6"]
+[gd_scene load_steps=4 format=3 uid="uid://c6ee3qdgopul6"]
 
 [ext_resource type="Texture2D" uid="uid://cy84quar2vm45" path="res://assets/decoration/1688354677417.png" id="1_qbf3x"]
+[ext_resource type="Script" path="res://cac02.gd" id="2_tyklr"]
 
-[node name="cac02" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7g2yf"]
+radius = 72.0
+height = 320.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+[node name="cac02" type="Sprite2D"]
 texture = ExtResource("1_qbf3x")
 offset = Vector2(0, -150)
+script = ExtResource("2_tyklr")
+
+[node name="DamageArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+position = Vector2(0, -48)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7g2yf")
+one_way_collision_margin = 16.3
+debug_color = Color(0.901961, 0.282353, 0.32549, 0.223529)
+
+[connection signal="body_entered" from="DamageArea" to="." method="_on_damage_area_body_entered"]
+[connection signal="body_exited" from="DamageArea" to="." method="_on_damage_area_body_exited"]
