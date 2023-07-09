@@ -71,7 +71,7 @@ func say(msg):
 			dialogue.text = "Isso é muito perigoso"
 		
 		"msg_doi":
-			dialogue.text = "Essa peste dói dimais"
+			dialogue.text = "Essa peste dói demais"
 		
 		"":
 			dialogue.text = ""

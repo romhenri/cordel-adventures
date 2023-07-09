@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://4xem81k2s1i"]
+[gd_scene load_steps=25 format=3 uid="uid://4xem81k2s1i"]
 
 [ext_resource type="PackedScene" uid="uid://diytmk70tuq1n" path="res://scenes/interfaces/gameplay.tscn" id="1_ut06q"]
 [ext_resource type="Texture2D" uid="uid://c2umrjaaexg8d" path="res://assets/terrain/dark-grass.png" id="2_6fvxe"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dndi06qcelp65" path="res://assets/concept/art25.png" id="11_3nkoj"]
 [ext_resource type="PackedScene" uid="uid://baljtnt417hjn" path="res://active/characters/player.tscn" id="12_x6nrr"]
 [ext_resource type="Script" path="res://scripts/HomemBoiVisibleArea.gd" id="13_f7tfp"]
+[ext_resource type="PackedScene" uid="uid://dgrw8fa8v2uc4" path="res://active/enemies/chupa_cabra.tscn" id="14_j1g5c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kyd0p"]
 texture = ExtResource("8_bfimy")
@@ -252,7 +253,7 @@ sources/0 = SubResource("TileSetAtlasSource_bcuh3")
 [sub_resource type="CircleShape2D" id="CircleShape2D_1npt6"]
 radius = 700.0
 
-[node name="test-scene" type="Node2D"]
+[node name="map" type="Node2D"]
 y_sort_enabled = true
 
 [node name="ui-gameplay" parent="." instance=ExtResource("1_ut06q")]
@@ -265,7 +266,7 @@ tile_set = SubResource("TileSet_kr88b")
 cell_quadrant_size = 64
 format = 2
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(1769494, 131072, 1, 2031650, 65536, 0, 66, 0, 1, 262216, 131072, 0, 1310787, 131072, 1, -589803, 0, 0, -393185, 131072, 0)
+layer_0/tile_data = PackedInt32Array(1769494, 131072, 1, 66, 0, 1, 262216, 131072, 0, 1310787, 131072, 1, -589803, 0, 0, -393185, 131072, 0, 1900581, 0, 1, -1179654, 0, 1, -589879, 0, 1, -3997849, 0, 1, -4260055, 0, 1, -4260122, 0, 1, -3211532, 0, 1, -4129047, 65536, 0, -8585406, 65536, 0, -8913119, 65536, 0, -8651022, 65536, 0, -3932248, 65536, 0, 2162778, 65536, 0, 2162814, 65536, 0, 524379, 65536, 0, 2097333, 65536, 0, 5636207, 65536, 0, 3866720, 65536, 0, 2490505, 65536, 0, 7471167, 65536, 0, 7602211, 65536, 0, 7471117, 65536, 1, 3866676, 65536, 1, 4980726, 65536, 1, 4784065, 65536, 1, 4652929, 65536, 1, 3342250, 131072, 0, 3735481, 131072, 0, 3800951, 131072, 0, 3342204, 131072, 0, 3080033, 131072, 0, 2555737, 131072, 0, 1769299, 131072, 0, 1834885, 131072, 0, 851811, 131072, 0, 851757, 131072, 0, -393463, 131072, 0, -1507549, 131072, 0, -1376431, 131072, 0, -2818240, 131072, 0, -2752756, 131072, 0, -2359552, 131072, 0, 1048387, 131072, 0, 1703715, 131072, 0, -458977, 131072, 0, -590011, 131072, 1, -1769678, 131072, 1, -2359509, 131072, 1, -131248, 131072, 1, 1048429, 131072, 1, 1376044, 131072, 1, 2424682, 131072, 1, 2752387, 131072, 1, 2817867, 131072, 1, 3473242, 131072, 1, 2490255, 131072, 1, 1572626, 0, 1, 589632, 0, 1, 589668, 0, 1, -1179881, 65536, 0, -1376438, 65536, 0, 917376, 65536, 0, 1507215, 65536, 0, 4259703, 65536, 0)
 
 [node name="tree" type="Node2D" parent="decoration"]
 z_as_relative = false
@@ -772,7 +773,7 @@ scale = Vector2(0.643097, 0.646252)
 texture = ExtResource("11_3nkoj")
 
 [node name="player" parent="." instance=ExtResource("12_x6nrr")]
-position = Vector2(-1968, 1200)
+position = Vector2(-312, -80)
 
 [node name="HomemBoiVisibleArea" type="Area2D" parent="."]
 position = Vector2(1080, 120)
@@ -781,5 +782,8 @@ script = ExtResource("13_f7tfp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HomemBoiVisibleArea"]
 shape = SubResource("CircleShape2D_1npt6")
 debug_color = Color(0.643137, 0.521569, 0.172549, 0)
+
+[node name="chupa_cabra" parent="." instance=ExtResource("14_j1g5c")]
+position = Vector2(-856, -376)
 
 [connection signal="body_entered" from="HomemBoiVisibleArea" to="HomemBoiVisibleArea" method="_on_body_entered"]
