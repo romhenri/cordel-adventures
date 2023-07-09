@@ -14,8 +14,10 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
+-   [x] Sistema de Movimentação;
+-   [ ] Sistema de Combate;
+-   [x] Sistema de Diálogo;
 -   [ ] Demo Jogável (09/07);
--   [ ] Website Institucional.
 
 <hr>
 

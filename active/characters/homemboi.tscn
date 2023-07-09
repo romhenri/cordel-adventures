@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcsy0qy4v85q8"]
 
 [ext_resource type="Texture2D" uid="uid://dta7yjbxt3nlg" path="res://assets/characters/homem-boi.png" id="1_b2c16"]
-[ext_resource type="Script" path="res://active/characters/homemboi.gd" id="1_nj3an"]
+[ext_resource type="Script" path="res://scripts/homemboi.gd" id="1_lhgdk"]
 [ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="2_iv8jn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmc6h"]
@@ -16,7 +16,7 @@ outline_color = Color(0, 0, 0, 1)
 [node name="homemboi" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 5
-script = ExtResource("1_nj3an")
+script = ExtResource("1_lhgdk")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
