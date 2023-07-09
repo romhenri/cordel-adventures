@@ -13,7 +13,8 @@ config_version=5
 config/name="Cordel Adventures"
 run/main_scene="res://manegement/menu.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://assets/icons/icon-circle.png"
+config/windows_native_icon="res://assets/icons/icon-circle-small.ico"
 
 [autoload]
 

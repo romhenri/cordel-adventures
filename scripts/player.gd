@@ -94,8 +94,6 @@ func _on_animation_finished(anim_name):
 			can_move = true
 
 func update_health(value: int) -> void:
-	print("Damage -25")
-	
 	aux_animation.play("hit")
 	Player.health -= value
 	

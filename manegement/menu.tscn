@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bvgn0l5quf5e0" path="res://scenes/screens/assets/menu-screen/nuvem2.png" id="7_fotal"]
 [ext_resource type="Texture2D" uid="uid://dinqnd5aqh8p" path="res://scenes/screens/assets/menu-screen/passaro1.png" id="8_5skm0"]
 [ext_resource type="Texture2D" uid="uid://bbxvp7elwgx3a" path="res://scenes/screens/assets/menu-screen/passaro2.png" id="9_whwp3"]
-[ext_resource type="Texture2D" uid="uid://dpnyu2arp0thm" path="res://scenes/screens/assets/menu-screen/junior-main.png" id="12_bv2p8"]
+[ext_resource type="Texture2D" uid="uid://dmo7sinyfvwyd" path="res://scenes/screens/assets/menu-screen/antonio-main-plan.png" id="12_wrfso"]
 [ext_resource type="Texture2D" uid="uid://dhso7tcdbe77" path="res://scenes/screens/assets/menu-screen/casinha.png" id="12_xguqt"]
 [ext_resource type="Texture2D" uid="uid://du10we8norh35" path="res://scenes/screens/assets/menu-screen/cacto_com_frutinhas2.png" id="13_skhub"]
 
@@ -137,10 +137,10 @@ position = Vector2(1692, 808)
 scale = Vector2(0.185794, 0.155471)
 texture = ExtResource("4_fwsgg")
 
-[node name="Junior-main" type="Sprite2D" parent="."]
-position = Vector2(1662, 816)
-scale = Vector2(0.795255, 0.771009)
-texture = ExtResource("12_bv2p8")
+[node name="Antonio" type="Sprite2D" parent="."]
+position = Vector2(1649, 737)
+scale = Vector2(0.989474, 0.959306)
+texture = ExtResource("12_wrfso")
 
 [node name="buttons" type="VBoxContainer" parent="."]
 layout_mode = 1

@@ -1,9 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://baljtnt417hjn"]
+[gd_scene load_steps=16 format=3 uid="uid://baljtnt417hjn"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wgfch"]
 [ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="2_et2k1"]
-[ext_resource type="Texture2D" uid="uid://cdrsp8m15hiuh" path="res://assets/test/test-idle.png" id="3_8byi5"]
-[ext_resource type="Texture2D" uid="uid://dyu44xcq4savu" path="res://assets/test/test-sprites.png" id="4_sl60b"]
 [ext_resource type="Texture2D" uid="uid://bsf5nkxotk0hk" path="res://assets/characters/antonio-attack.png" id="6_oauoa"]
 [ext_resource type="Texture2D" uid="uid://d3x5xqlw5isa3" path="res://assets/characters/antonio-sprites.png" id="6_r16sq"]
 
@@ -24,26 +22,26 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:vframes")
+tracks/0/path = NodePath("Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [4]
+"values": [ExtResource("6_r16sq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Texture:frame")
+tracks/1/path = NodePath("Texture:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1]
+"values": [4]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -60,14 +58,14 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Texture:texture")
+tracks/3/path = NodePath("Texture:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("6_r16sq")]
+"values": [1]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -112,14 +110,14 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:hframes")
+tracks/0/path = NodePath("Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [6, 3, 6, 6]
+"values": [ExtResource("6_oauoa")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -128,34 +126,34 @@ tracks/1/path = NodePath("Texture:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [1, 1, 1, 1]
+"values": [1, 1, 1, 1, 1]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Texture:frame")
+tracks/2/path = NodePath("Texture:hframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 1, 0, 5]
+"values": [6, 6, 6, 3, 6, 6]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Texture:texture")
+tracks/3/path = NodePath("Texture:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("6_oauoa")]
+"values": [0, 1, 1, 0, 5]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -182,37 +180,6 @@ tracks/5/keys = {
 "values": [false, true, false]
 }
 
-[sub_resource type="Animation" id="Animation_a5ges"]
-resource_name = "clear_dialogue"
-length = 1.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Dialogue:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 1.7),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_nat7p"]
-resource_name = "hit"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 0.709804, 0.65098, 1), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_1dyjh"]
 resource_name = "idle"
 length = 1.2
@@ -232,26 +199,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Texture:frame")
+tracks/1/path = NodePath("Texture:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0, 1, 2]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Texture:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 1, 2]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -273,60 +240,6 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:hframes")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [10]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Texture:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Texture:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [4]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Texture:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [ExtResource("6_r16sq")]
-}
-
-[sub_resource type="Animation" id="Animation_vd25j"]
-resource_name = "test-idle"
-length = 1.5
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/path = NodePath("Texture:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -334,12 +247,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ExtResource("3_8byi5")]
+"values": [ExtResource("6_r16sq")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Texture:hframes")
+tracks/1/path = NodePath("Texture:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -351,14 +264,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Texture:vframes")
+tracks/2/path = NodePath("Texture:hframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1]
+"values": [10]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -367,74 +280,18 @@ tracks/3/path = NodePath("Texture:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.4, 1, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_1ljjp"]
-resource_name = "test-run"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:hframes")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [10]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Texture:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Texture:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Texture:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [ExtResource("4_sl60b")]
+"values": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ipph"]
 _data = {
 "RESET": SubResource("Animation_iccqh"),
 "attack": SubResource("Animation_jf2qi"),
-"clear_dialogue": SubResource("Animation_a5ges"),
-"hit": SubResource("Animation_nat7p"),
 "idle": SubResource("Animation_1dyjh"),
-"run": SubResource("Animation_5tpwq"),
-"test-idle": SubResource("Animation_vd25j"),
-"test-run": SubResource("Animation_1ljjp")
+"run": SubResource("Animation_5tpwq")
 }
 
 [sub_resource type="Animation" id="Animation_naix2"]
