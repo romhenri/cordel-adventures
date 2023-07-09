@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dfkkxxlsnm5be"
-path="res://.godot/imported/Cordel Encarnado II.otf-95227046d8e126942b4f5e6b65b40bf8.fontdata"
+path="res://.godot/imported/cordel-encarnado II.otf-0d8cfeda4846eb96db665356bd17c629.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Cordel Encarnado II.otf"
-dest_files=["res://.godot/imported/Cordel Encarnado II.otf-95227046d8e126942b4f5e6b65b40bf8.fontdata"]
+source_file="res://assets/fonts/cordel-encarnado II.otf"
+dest_files=["res://.godot/imported/cordel-encarnado II.otf-0d8cfeda4846eb96db665356bd17c629.fontdata"]
 
 [params]
 

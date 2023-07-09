@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bt8utnw3dvmdt"]
 
 [ext_resource type="Script" path="res://scripts/death-screen.gd" id="1_fsomm"]
-[ext_resource type="Texture2D" uid="uid://ctmqxiw58kkr5" path="res://scenes/screens/assets/death-screen/noite-estrelada.png" id="2_g41no"]
-[ext_resource type="Texture2D" uid="uid://dulhuakoxq3r0" path="res://scenes/screens/assets/menu-screen/background_cordel_.jpg" id="3_djdn1"]
+[ext_resource type="Texture2D" uid="uid://dulhuakoxq3r0" path="res://assets/backgrounds/bg-default.jpg" id="3_5em50"]
+[ext_resource type="Texture2D" uid="uid://kjni2wm8w5we" path="res://assets/backgrounds/bg-night.png" id="3_rq83y"]
 [ext_resource type="Texture2D" uid="uid://dnkevnkdv6f35" path="res://scenes/screens/assets/death-screen/urubu-removebg-preview.png" id="4_opgdq"]
 [ext_resource type="Texture2D" uid="uid://b6bj60tb8aj3d" path="res://scenes/screens/assets/death-screen/lapide-removebg-preview (2).png" id="5_anfd1"]
-[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/Cordel Encarnado II.otf" id="6_xi03w"]
+[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/cordel-encarnado II.otf" id="6_xi03w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r33o1"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -34,27 +34,28 @@ script = ExtResource("1_fsomm")
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
 
-[node name="Noite-estrelada" type="Sprite2D" parent="TileMap"]
-modulate = Color(1, 1, 1, 0.619608)
-position = Vector2(528.075, 324)
-scale = Vector2(1.27451, 1.27451)
-texture = ExtResource("2_g41no")
+[node name="Bg-night" type="Sprite2D" parent="TileMap"]
+position = Vector2(958.25, 538.5)
+scale = Vector2(0.77843, 0.7249)
+texture = ExtResource("3_rq83y")
 
 [node name="TileMap" type="TileMap" parent="TileMap"]
+position = Vector2(320, 200)
 format = 2
+metadata/_edit_group_ = true
 
 [node name="BackgroundCordel" type="Sprite2D" parent="TileMap/TileMap"]
-position = Vector2(574, 328)
+position = Vector2(574, 317)
 scale = Vector2(0.255689, 0.255689)
-texture = ExtResource("3_djdn1")
+texture = ExtResource("3_5em50")
 
 [node name="Urubu-removebg-preview" type="Sprite2D" parent="TileMap/TileMap"]
-position = Vector2(614, 234)
+position = Vector2(544, 232)
 rotation = 0.282349
 texture = ExtResource("4_opgdq")
 
 [node name="Lapide-removebg-preview(2)" type="Sprite2D" parent="TileMap/TileMap"]
-position = Vector2(511, 435)
+position = Vector2(929, 436)
 rotation = -0.0152096
 scale = Vector2(0.807305, 0.807305)
 texture = ExtResource("5_anfd1")

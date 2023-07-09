@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dulhuakoxq3r0"
-path="res://.godot/imported/background_cordel_.jpg-fbbd54982eb73ad54809b7e43c8f5fe2.ctex"
+uid="uid://cbdaiiks1h4hk"
+path="res://.godot/imported/Ativo 2icon.svg-b575b48fda243adfc41004414330f769.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/screens/assets/menu-screen/background_cordel_.jpg"
-dest_files=["res://.godot/imported/background_cordel_.jpg-fbbd54982eb73ad54809b7e43c8f5fe2.ctex"]
+source_file="res://assets/icons/SVG/Ativo 2icon.svg"
+dest_files=["res://.godot/imported/Ativo 2icon.svg-b575b48fda243adfc41004414330f769.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

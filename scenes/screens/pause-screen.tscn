@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://clerpynu4jura" path="res://scenes/screens/assets/pause-screen/Projeto_20230628074651.jpg" id="1_441ee"]
 [ext_resource type="Script" path="res://scripts/pause-menu.gd" id="1_i06mb"]
 [ext_resource type="Texture2D" uid="uid://cj4i5thq41gyu" path="res://scenes/screens/assets/pause-screen/placa3-fundo-claro.png" id="3_m7vhk"]
-[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/Cordel Encarnado II.otf" id="3_pg8um"]
+[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/cordel-encarnado II.otf" id="3_pg8um"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rw6a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

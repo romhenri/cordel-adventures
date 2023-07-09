@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://bes48mmcx7uw2"]
+
+[ext_resource type="Script" path="res://scripts/transition.gd" id="1_1r2uh"]
+
+[sub_resource type="Animation" id="Animation_r7auu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_w3h4n"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vmpte"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jbvp2"]
+_data = {
+"RESET": SubResource("Animation_r7auu"),
+"fade_in": SubResource("Animation_w3h4n"),
+"fade_out": SubResource("Animation_vmpte")
+}
+
+[node name="transition" type="CanvasLayer"]
+script = ExtResource("1_1r2uh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1000
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(48.0343, 27.0749)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "fade_out"
+libraries = {
+"": SubResource("AnimationLibrary_jbvp2")
+}
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_finished"]

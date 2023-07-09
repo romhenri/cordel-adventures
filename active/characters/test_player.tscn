@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://co3ojtsmvmtrw"]
 
-[ext_resource type="Script" path="res://scripts/test_player.gd" id="1_0bt2r"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_0bt2r"]
 [ext_resource type="Texture2D" uid="uid://cmk2p6qwaduq4" path="res://assets/characters/test-player.png" id="1_s4n7q"]
 [ext_resource type="Texture2D" uid="uid://dyu44xcq4savu" path="res://assets/test/test-sprites.png" id="3_0svj3"]
 [ext_resource type="Texture2D" uid="uid://cdrsp8m15hiuh" path="res://assets/test/test-idle.png" id="4_cs6no"]
@@ -64,6 +64,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_vd25j"]
 resource_name = "test-idle"
+length = 1.5
 loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
@@ -73,7 +74,7 @@ tracks/0/path = NodePath("Texture:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"times": PackedFloat32Array(0, 0.4, 1, 1.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
@@ -208,10 +209,9 @@ polygon = PackedVector2Array(0, 0, -310, -306.667, -400, -173.333, -436.667, -3.
 [node name="Texture" type="Sprite2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(0, -186.5)
 scale = Vector2(0.98122, 1)
 texture = ExtResource("1_s4n7q")
-offset = Vector2(0, -80)
+offset = Vector2(0, -260.5)
 
 [node name="Camera" type="Camera2D" parent="."]
 

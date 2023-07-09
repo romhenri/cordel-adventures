@@ -1,0 +1,47 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://62pq7o0ytldm"]
+
+[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/cordel-encarnado II.otf" id="1_rfl1f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3013"]
+bg_color = Color(0.84, 0.7714, 0.7224, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyywr"]
+bg_color = Color(0.956863, 0.882353, 0.827451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbjos"]
+bg_color = Color(0.956863, 0.882353, 0.827451, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jomc"]
+bg_color = Color(0.77, 0.707117, 0.6622, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_rfl1f")
+Button/styles/focus = SubResource("StyleBoxFlat_d3013")
+Button/styles/hover = SubResource("StyleBoxFlat_kyywr")
+Button/styles/normal = SubResource("StyleBoxFlat_jbjos")
+Button/styles/pressed = SubResource("StyleBoxFlat_3jomc")

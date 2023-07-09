@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://diytmk70tuq1n"]
+
+[ext_resource type="Texture2D" uid="uid://cbdaiiks1h4hk" path="res://assets/icons/SVG/Ativo 2icon.svg" id="1_bldbo"]
+[ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_crjss"]
+[ext_resource type="Theme" uid="uid://62pq7o0ytldm" path="res://manegement/gameplay.tres" id="2_1x0fi"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_154cs"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_c8b48"]
+events = [SubResource("InputEventKey_154cs")]
+
+[node name="ui-gameplay" type="CanvasLayer"]
+layer = 0
+script = ExtResource("1_crjss")
+
+[node name="esc" type="Button" parent="." groups=["buttons"]]
+z_index = -10
+offset_left = 64.0
+offset_top = 56.0
+offset_right = 160.0
+offset_bottom = 152.0
+theme = ExtResource("2_1x0fi")
+theme_override_constants/outline_size = 2
+shortcut = SubResource("Shortcut_c8b48")
+icon = ExtResource("1_bldbo")
+icon_alignment = 1
+expand_icon = true

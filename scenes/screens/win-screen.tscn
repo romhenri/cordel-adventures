@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/win-screen.gd" id="1_idocf"]
 [ext_resource type="Texture2D" uid="uid://cu4g38v4jdujc" path="res://scenes/screens/assets/win-screen/background.png" id="2_mdj5j"]
 [ext_resource type="Texture2D" uid="uid://benm2x2u5te3d" path="res://scenes/screens/assets/win-screen/OBrabo2.png" id="3_oqm3y"]
-[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/Cordel Encarnado II.otf" id="4_s8hmq"]
+[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/cordel-encarnado II.otf" id="4_s8hmq"]
 [ext_resource type="Texture2D" uid="uid://d117c0qwy3hms" path="res://scenes/screens/assets/win-screen/butija.png" id="4_woq2f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nux5i"]
