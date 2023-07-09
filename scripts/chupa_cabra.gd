@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 @export var distance_threshold: int = 120
 @export var enemy_move_speed: float = 252
-@onready var value: int = 25
+@onready var enemy_damage: int = 25
 @onready var health: int = 60
 
 var is_attacking: bool = false
@@ -21,10 +21,9 @@ func _ready():
 
 func _physics_process(_delta):
 	
-	
 	if player_ref == null:
 		velocity = Vector2.ZERO
-		animate()
+		animation.play("idle")
 		return
 	
 	var direction: Vector2 = global_position.direction_to(player_ref.global_position)
@@ -78,16 +77,13 @@ func _on_animation_finished(anim_name):
 
 
 func _on_attack_area_body_entered(body):
-	body.update_health(value)
+	body.update_health(enemy_damage)
 
 func update_health(value: int) -> void:
 	print("Damage -25")
 	
 	aux_animation.play("hit")
 	health -= value
-	
-	#Player.health = Player.health
-	#get_tree().call_group("level", "update_health", player_health)
 	
 	if health <= 0:
 		queue_free()

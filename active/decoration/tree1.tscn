@@ -17,8 +17,8 @@ z_as_relative = false
 y_sort_enabled = true
 position = Vector2(43.0497, 6.625)
 scale = Vector2(1.01533, 1)
-collision_layer = 4
-collision_mask = 3
+collision_layer = 2
+collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 z_as_relative = false

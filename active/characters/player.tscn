@@ -198,6 +198,21 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_nat7p"]
+resource_name = "hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.709804, 0.65098, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_1dyjh"]
 resource_name = "idle"
 length = 1.2
@@ -410,21 +425,6 @@ tracks/3/keys = {
 "values": [ExtResource("4_sl60b")]
 }
 
-[sub_resource type="Animation" id="Animation_nat7p"]
-resource_name = "hit"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 0.709804, 0.65098, 1), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ipph"]
 _data = {
 "RESET": SubResource("Animation_iccqh"),
@@ -435,21 +435,6 @@ _data = {
 "run": SubResource("Animation_5tpwq"),
 "test-idle": SubResource("Animation_vd25j"),
 "test-run": SubResource("Animation_1ljjp")
-}
-
-[sub_resource type="Animation" id="Animation_b2la7"]
-resource_name = "hit"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 0.221914),
-"update": 0,
-"values": [Color(0.964706, 0.682353, 0.670588, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_naix2"]
@@ -465,6 +450,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b2la7"]
+resource_name = "hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 0.221914),
+"update": 0,
+"values": [Color(0.964706, 0.682353, 0.670588, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_joifh"]
@@ -506,7 +506,6 @@ visible = false
 modulate = Color(1, 0.2, 0.101961, 0.0941176)
 position = Vector2(0, -0.5)
 rotation = 3.14159
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(0, 0, -310, -306.667, -400, -173.333, -436.667, -3.33333, -400, 166.667, -323.333, 280)
 disabled = true
 
@@ -517,7 +516,6 @@ position = Vector2(0, -180)
 modulate = Color(1, 0, 0, 1)
 y_sort_enabled = true
 position = Vector2(0, 0.499985)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_beq7s")
 disabled = true
 debug_color = Color(0.607843, 0.529412, 0.278431, 0)

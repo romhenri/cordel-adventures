@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var time_to_clear_dialogue: int = 25
-@onready var value: int = 25
+@onready var player_damage: int = 25
 
 @onready var can_move: bool = true
 @onready var can_attack: bool = true
@@ -111,4 +111,4 @@ func update_health(value: int) -> void:
 		return
 
 func _on_attack_area_body_entered(body):
-	body.update_health(value)
+	body.update_health(player_damage)

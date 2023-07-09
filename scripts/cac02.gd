@@ -7,9 +7,7 @@ extends Sprite2D
 
 @export var damage : bool = 3
 
-func _physics_process(delta):
-	print(tick_cicle)
-	
+func _physics_process(_delta):
 	
 	if tick_cicle == 0:
 		tick_cicle = 30

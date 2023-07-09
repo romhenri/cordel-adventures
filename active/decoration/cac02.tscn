@@ -13,6 +13,7 @@ offset = Vector2(0, -150)
 script = ExtResource("2_tyklr")
 
 [node name="DamageArea" type="Area2D" parent="."]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
 position = Vector2(0, -48)

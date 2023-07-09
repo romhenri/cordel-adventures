@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d2l4kvh61o4cw"]
+[gd_scene load_steps=22 format=3 uid="uid://d2l4kvh61o4cw"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_f1l4h"]
 [ext_resource type="Texture2D" uid="uid://dulhuakoxq3r0" path="res://assets/backgrounds/bg-default.jpg" id="2_wp1ut"]
@@ -39,6 +39,10 @@ keycode = 4194305
 
 [sub_resource type="Shortcut" id="Shortcut_q3l2s"]
 events = [SubResource("InputEventKey_55w1y")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yqhj2"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -170,6 +174,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
 text = "Iniciar"
 
 [node name="config" type="Button" parent="buttons" groups=["buttons"]]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
@@ -216,3 +221,13 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
 shortcut = SubResource("Shortcut_q3l2s")
 text = "Sair"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1719.0
+offset_top = 1024.0
+offset_right = 1887.0
+offset_bottom = 1080.0
+text = "Beta v0.1"
+label_settings = SubResource("LabelSettings_yqhj2")
+horizontal_alignment = 2
