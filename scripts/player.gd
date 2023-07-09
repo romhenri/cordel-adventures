@@ -1,18 +1,22 @@
 extends CharacterBody2D
 
 @onready var time_to_clear_dialogue: int = 25
+@onready var value: int = 25
 
 @onready var can_move: bool = true
 @onready var can_attack: bool = true
+@onready var is_alive: bool = true
 
 @onready var texture: Sprite2D = get_node("Texture")
 @onready var collision: CollisionShape2D = get_node("Collision")
 @onready var animation: AnimationPlayer = get_node("Animation")
+@onready var aux_animation: AnimationPlayer = get_node("AuxAnimation")
 @onready var dialogue: Label = get_node("Dialogue")
+@onready var attack_area_collision : CollisionPolygon2D = get_node("AttackArea/Attack")
 @export var move_speed: float = 356.0
 
 func _ready():
-	pass
+	attack_area_collision.rotation = 135
 
 func _physics_process(_delta: float) -> void:
 	
@@ -41,8 +45,12 @@ func move() -> void:
 		pass
 	elif (direction.x > 0): 
 		texture.flip_h = false
+		attack_area_collision.rotation = 135
+		
 	elif (direction.x < 0):
 		texture.flip_h = true
+		attack_area_collision.rotation = 0
+		
 	
 	if (direction.x != 0 || direction.y != 0): 
 		animation.play("run")
@@ -84,4 +92,23 @@ func _on_animation_finished(anim_name):
 		"attack":
 			can_attack = true
 			can_move = true
+
+func update_health(value: int) -> void:
+	print("Damage -25")
+	
+	aux_animation.play("hit")
+	Player.health -= value
+	
+	#Player.health = Player.health
+	#get_tree().call_group("level", "update_health", player_health)
+	
+	if Player.health <= 0:
+		is_alive = false
 		
+		Transition.death()
+		
+		attack_area_collision.set_deferred("disabled", true)
+		return
+
+func _on_attack_area_body_entered(body):
+	body.update_health(value)

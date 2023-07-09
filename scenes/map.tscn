@@ -254,6 +254,7 @@ sources/0 = SubResource("TileSetAtlasSource_bcuh3")
 radius = 700.0
 
 [node name="map" type="Node2D"]
+z_as_relative = false
 y_sort_enabled = true
 
 [node name="ui-gameplay" parent="." instance=ExtResource("1_ut06q")]

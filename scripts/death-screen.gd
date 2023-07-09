@@ -1,10 +1,14 @@
 extends Control
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	$TileMap/TileMap/Botoes/tentar_novamente.grab_focus()
+	for button in get_tree().get_nodes_in_group("buttons"):
+		button.pressed.connect(on_button_pressed.bind(button.name))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func on_button_pressed(button_name: String) -> void:
+	match button_name:
+		"menu":
+			Transition.scene_path = "res://manegement/menu.tscn"
+			Transition.fade_in()
+	
+		"quit":
+			get_tree().quit()

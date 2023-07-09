@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bes48mmcx7uw2"]
+[gd_scene load_steps=8 format=3 uid="uid://bes48mmcx7uw2"]
 
 [ext_resource type="Script" path="res://scripts/transition.gd" id="1_1r2uh"]
 
@@ -47,9 +47,43 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_644ay"]
+resource_name = "death_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.1, 1.3, 1.7, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2uqxy"]
+resource_name = "death_in"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jbvp2"]
 _data = {
 "RESET": SubResource("Animation_r7auu"),
+"death_in": SubResource("Animation_2uqxy"),
+"death_out": SubResource("Animation_644ay"),
 "fade_in": SubResource("Animation_w3h4n"),
 "fade_out": SubResource("Animation_vmpte")
 }

@@ -40,9 +40,8 @@ scale = Vector2(0.77843, 0.7249)
 texture = ExtResource("3_rq83y")
 
 [node name="TileMap" type="TileMap" parent="TileMap"]
-position = Vector2(320, 200)
+position = Vector2(370, 200)
 format = 2
-metadata/_edit_group_ = true
 
 [node name="BackgroundCordel" type="Sprite2D" parent="TileMap/TileMap"]
 position = Vector2(574, 317)
@@ -50,50 +49,34 @@ scale = Vector2(0.255689, 0.255689)
 texture = ExtResource("3_5em50")
 
 [node name="Urubu-removebg-preview" type="Sprite2D" parent="TileMap/TileMap"]
-position = Vector2(544, 232)
+position = Vector2(536, 247)
 rotation = 0.282349
 texture = ExtResource("4_opgdq")
 
 [node name="Lapide-removebg-preview(2)" type="Sprite2D" parent="TileMap/TileMap"]
-position = Vector2(929, 436)
+position = Vector2(939, 422)
 rotation = -0.0152096
 scale = Vector2(0.807305, 0.807305)
 texture = ExtResource("5_anfd1")
 
-[node name="Botoes" type="VBoxContainer" parent="TileMap/TileMap"]
-offset_left = 381.0
-offset_top = 271.0
-offset_right = 746.0
-offset_bottom = 550.0
+[node name="Botoes" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 485.0
+offset_right = 1260.0
+offset_bottom = 708.0
 size_flags_horizontal = 4
 theme_override_constants/separation = 27
 
-[node name="fim de jogo" type="Label" parent="TileMap/TileMap/Botoes"]
+[node name="fim de jogo" type="Label" parent="Botoes"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xi03w")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 64
 text = "Fim De Jogo!"
 
-[node name="tentar_novamente" type="Button" parent="TileMap/TileMap/Botoes"]
-layout_mode = 2
-focus_neighbor_top = NodePath("../menu")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_fonts/font = ExtResource("6_xi03w")
-theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxFlat_r33o1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_xco8w")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_053ve")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_b116g")
-theme_override_styles/focus = SubResource("StyleBoxFlat_fur7h")
-text = "Tentar Novamente"
-
-[node name="sair" type="Button" parent="TileMap/TileMap/Botoes"]
+[node name="quit" type="Button" parent="Botoes"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
@@ -109,9 +92,8 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_b116g")
 theme_override_styles/focus = SubResource("StyleBoxFlat_fur7h")
 text = "Sair"
 
-[node name="menu" type="Button" parent="TileMap/TileMap/Botoes"]
+[node name="menu" type="Button" parent="Botoes"]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../tentar_novamente")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)

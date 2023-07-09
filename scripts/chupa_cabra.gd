@@ -4,10 +4,14 @@ extends CharacterBody2D
 
 @onready var detect_area: CollisionShape2D = get_node("DetectionArea/Detection")
 @onready var animation: AnimationPlayer = get_node("Animation")
+@onready var aux_animation: AnimationPlayer = get_node("AuxAnimation")
+@onready var collision: CollisionShape2D = get_node("Collision")
 @onready var texture: Sprite2D = get_node("Texture")
 
-@export var distance_threshold: int = 90
-@export var enemy_move_speed: float = 192
+@export var distance_threshold: int = 120
+@export var enemy_move_speed: float = 252
+@onready var value: int = 25
+@onready var health: int = 60
 
 var is_attacking: bool = false
 var can_die : bool = false
@@ -74,5 +78,19 @@ func _on_animation_finished(anim_name):
 
 
 func _on_attack_area_body_entered(body):
-	#body.get_node("Texture").flip_v = true
-	pass
+	body.update_health(value)
+
+func update_health(value: int) -> void:
+	print("Damage -25")
+	
+	aux_animation.play("hit")
+	health -= value
+	
+	#Player.health = Player.health
+	#get_tree().call_group("level", "update_health", player_health)
+	
+	if health <= 0:
+		queue_free()
+		
+		collision.set_deferred("disabled", true)
+		return
