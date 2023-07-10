@@ -185,10 +185,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -290.0
-offset_top = -735.0
-offset_right = 291.0
-offset_bottom = -63.0
+offset_left = -290.5
+offset_top = -751.0
+offset_right = 290.5
+offset_bottom = -31.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -201,6 +201,7 @@ Desenvolvimento:
 Rômulo Henrique Nascimento Duarte
 Vinícius Teixeira Fernandes
 Edwirges Vitória Ferreira Leite 
+André Luís Aragão Correia
 
 Artes:
 João Marcos Cunha Santos

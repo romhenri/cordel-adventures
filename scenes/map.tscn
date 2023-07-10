@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dndi06qcelp65" path="res://assets/concept/art25.png" id="11_3nkoj"]
 [ext_resource type="PackedScene" uid="uid://baljtnt417hjn" path="res://active/characters/player.tscn" id="12_x6nrr"]
 [ext_resource type="Script" path="res://scripts/HomemBoiVisibleArea.gd" id="13_f7tfp"]
-[ext_resource type="Script" path="res://ChupaCabraVisibleArea.gd" id="14_3ux05"]
+[ext_resource type="Script" path="res://scripts/ChupaCabraVisibleArea.gd" id="14_3ux05"]
 [ext_resource type="PackedScene" uid="uid://dgrw8fa8v2uc4" path="res://active/enemies/chupa_cabra.tscn" id="14_j1g5c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ndt8p"]
