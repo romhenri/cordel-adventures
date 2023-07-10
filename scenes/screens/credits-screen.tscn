@@ -1,0 +1,223 @@
+[gd_scene load_steps=23 format=3 uid="uid://ce8cfm3jkv05n"]
+
+[ext_resource type="Script" path="res://scripts/credits-screen.gd" id="1_x50x8"]
+[ext_resource type="Texture2D" uid="uid://dulhuakoxq3r0" path="res://assets/backgrounds/bg-default.jpg" id="2_7eltn"]
+[ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/cordel-encarnado II.otf" id="3_jbf4c"]
+[ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="4_812h7"]
+[ext_resource type="Texture2D" uid="uid://dinqnd5aqh8p" path="res://scenes/screens/assets/menu-screen/passaro1.png" id="5_71pvy"]
+[ext_resource type="Texture2D" uid="uid://bbxvp7elwgx3a" path="res://scenes/screens/assets/menu-screen/passaro2.png" id="6_2blrs"]
+[ext_resource type="Texture2D" uid="uid://do8u2ai7eshad" path="res://scenes/screens/assets/menu-screen/nuvens.png" id="7_mclby"]
+[ext_resource type="Texture2D" uid="uid://bvgn0l5quf5e0" path="res://scenes/screens/assets/menu-screen/nuvem2.png" id="8_hg065"]
+[ext_resource type="Texture2D" uid="uid://dhso7tcdbe77" path="res://scenes/screens/assets/menu-screen/casinha.png" id="9_ndnrb"]
+[ext_resource type="Texture2D" uid="uid://du10we8norh35" path="res://scenes/screens/assets/menu-screen/cacto_com_frutinhas2.png" id="10_4j8ay"]
+[ext_resource type="Texture2D" uid="uid://bk5j1yxwdlfpi" path="res://scenes/screens/assets/menu-screen/OBrabo2.png" id="11_b64db"]
+[ext_resource type="Texture2D" uid="uid://dmo7sinyfvwyd" path="res://scenes/screens/assets/menu-screen/antonio-main-plan.png" id="12_neey1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sy45v"]
+font = ExtResource("4_812h7")
+font_size = 164
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoga"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dy63"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu43n"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khco5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70wih"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="InputEventKey" id="InputEventKey_55w1y"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_q3l2s"]
+events = [SubResource("InputEventKey_55w1y")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a4qb6"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yqhj2"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = 4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x50x8")
+
+[node name="Background" type="Sprite2D" parent="."]
+self_modulate = Color(0.960784, 0.909804, 0.854902, 1)
+position = Vector2(952, 540)
+scale = Vector2(0.777013, 0.722892)
+texture = ExtResource("2_7eltn")
+
+[node name="Title" type="Label" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.001
+anchor_top = 0.259
+anchor_right = 0.996
+anchor_bottom = 0.407
+offset_left = 1.92
+offset_top = -122.72
+offset_right = 5.68005
+offset_bottom = -115.56
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jbf4c")
+theme_override_font_sizes/font_size = 90
+text = "Cordel Adventures
+"
+label_settings = SubResource("LabelSettings_sy45v")
+horizontal_alignment = 1
+
+[node name="Passaro1" type="Sprite2D" parent="."]
+position = Vector2(1606, 184)
+texture = ExtResource("5_71pvy")
+
+[node name="Passaro2" type="Sprite2D" parent="."]
+position = Vector2(91.4894, 187.25)
+scale = Vector2(1.47872, 1.47872)
+texture = ExtResource("6_2blrs")
+
+[node name="Clouds" type="TileMap" parent="."]
+format = 2
+
+[node name="Nuvens3" type="Sprite2D" parent="Clouds"]
+position = Vector2(1766, 256)
+scale = Vector2(0.816869, 0.8)
+texture = ExtResource("7_mclby")
+
+[node name="Nuvens7" type="Sprite2D" parent="Clouds"]
+position = Vector2(424, 72)
+scale = Vector2(1.31667, 1.31667)
+texture = ExtResource("7_mclby")
+
+[node name="Nuvem3" type="Sprite2D" parent="Clouds"]
+position = Vector2(1952, 456)
+texture = ExtResource("8_hg065")
+
+[node name="Nuvem4" type="Sprite2D" parent="Clouds"]
+position = Vector2(152, 464)
+scale = Vector2(0.738938, 0.738938)
+texture = ExtResource("8_hg065")
+
+[node name="Nuvens" type="Sprite2D" parent="Clouds"]
+position = Vector2(1184, 64)
+scale = Vector2(1.36667, 1.36667)
+texture = ExtResource("7_mclby")
+
+[node name="Casinha" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(544, 739)
+scale = Vector2(1.02345, 1.11583)
+texture = ExtResource("9_ndnrb")
+
+[node name="CactoComFrutinhas2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1039.7, 433.044)
+scale = Vector2(0.398446, 0.386984)
+texture = ExtResource("10_4j8ay")
+
+[node name="Obrabo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1692, 808)
+scale = Vector2(0.185794, 0.155471)
+texture = ExtResource("11_b64db")
+
+[node name="Antonio" type="Sprite2D" parent="."]
+position = Vector2(1649, 743)
+scale = Vector2(0.989474, 0.959306)
+texture = ExtResource("12_neey1")
+
+[node name="buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.341
+anchor_top = 0.549
+anchor_right = 0.659
+anchor_bottom = 0.999
+offset_left = -813.356
+offset_top = 391.629
+offset_right = -806.644
+offset_bottom = 393.079
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 45
+
+[node name="return" type="Button" parent="buttons" groups=["buttons"]]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_fonts/font = ExtResource("3_jbf4c")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+shortcut = SubResource("Shortcut_q3l2s")
+text = "Voltar"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -290.0
+offset_top = -735.0
+offset_right = 291.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Credits" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Game Designer: Rômulo Henrique
+
+Desenvolvimento:
+Rômulo Henrique Nascimento Duarte
+Vinícius Teixeira Fernandes
+Edwirges Vitória Ferreira Leite 
+
+Artes:
+João Marcos Cunha Santos
+Samantha Dantas Medeiros
+
+História:
+Armando Matheus Duarte da Silva
+Wendy Naely Silva de Melo"
+label_settings = SubResource("LabelSettings_a4qb6")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1719.0
+offset_top = 1024.0
+offset_right = 1887.0
+offset_bottom = 1080.0
+text = "Beta v0.1"
+label_settings = SubResource("LabelSettings_yqhj2")
+horizontal_alignment = 2

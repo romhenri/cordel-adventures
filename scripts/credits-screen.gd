@@ -6,15 +6,6 @@ func _ready():
 
 func on_button_pressed(button_name: String) -> void:
 	match button_name:
-		"start":
-			print("Start")
-			
-			Transition.scene_path = "res://scenes/map.tscn"
+		"return":
+			Transition.scene_path = "res://manegement/menu.tscn"
 			Transition.fade_in()
-	
-		"credits":
-			Transition.scene_path = "res://scenes/screens/credits-screen.tscn"
-			Transition.fade_in()
-	
-		"quit":
-			get_tree().quit()

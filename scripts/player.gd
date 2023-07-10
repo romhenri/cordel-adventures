@@ -105,16 +105,10 @@ func update_health(value: int) -> void:
 	Player.health -= value
 	get_parent().get_node("ui-gameplay").update()
 	
-	#Player.health = Player.health
-	#get_tree().call_group("level", "update_health", player_health)
-	
 	if Player.health <= 0:
-		is_alive = false
+		queue_free()
 		
 		Transition.death()
-		
-		attack_area_collision.set_deferred("disabled", true)
-		return
 
 func _on_attack_area_body_entered(body):
 	body.update_health(player_damage)
