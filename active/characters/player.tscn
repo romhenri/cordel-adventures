@@ -342,9 +342,9 @@ move_speed = 326.0
 z_index = 10
 z_as_relative = false
 offset_left = -430.391
-offset_top = -680.237
+offset_top = -635.874
 offset_right = 429.609
-offset_bottom = -600.237
+offset_bottom = -555.874
 label_settings = SubResource("LabelSettings_phesw")
 horizontal_alignment = 1
 

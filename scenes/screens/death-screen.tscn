@@ -76,7 +76,7 @@ theme_override_fonts/font = ExtResource("6_xi03w")
 theme_override_font_sizes/font_size = 64
 text = "Fim De Jogo!"
 
-[node name="quit" type="Button" parent="Botoes"]
+[node name="quit" type="Button" parent="Botoes" groups=["buttons"]]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
@@ -92,7 +92,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_b116g")
 theme_override_styles/focus = SubResource("StyleBoxFlat_fur7h")
 text = "Sair"
 
-[node name="menu" type="Button" parent="Botoes"]
+[node name="menu" type="Button" parent="Botoes" groups=["buttons"]]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)

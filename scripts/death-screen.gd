@@ -7,6 +7,7 @@ func _ready():
 func on_button_pressed(button_name: String) -> void:
 	match button_name:
 		"menu":
+			Player.health = 100
 			Transition.scene_path = "res://manegement/menu.tscn"
 			Transition.fade_in()
 	

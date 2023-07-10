@@ -1,7 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://4xem81k2s1i"]
+[gd_scene load_steps=38 format=3 uid="uid://4xem81k2s1i"]
 
 [ext_resource type="PackedScene" uid="uid://diytmk70tuq1n" path="res://scenes/interfaces/gameplay.tscn" id="1_ut06q"]
 [ext_resource type="Texture2D" uid="uid://c2umrjaaexg8d" path="res://assets/terrain/dark-grass.png" id="2_6fvxe"]
+[ext_resource type="Script" path="res://scripts/pause-screen.gd" id="2_36h68"]
+[ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="2_o1je0"]
 [ext_resource type="Texture2D" uid="uid://t5v3pk82okkk" path="res://assets/decoration/rocks.png" id="3_2lglo"]
 [ext_resource type="Shader" path="res://manegement/shaders/dropshadow.gdshader" id="3_i2a6m"]
 [ext_resource type="Texture2D" uid="uid://bdj0ub8f7rimy" path="res://assets/terrain/grass.png" id="4_cskr1"]
@@ -16,7 +18,16 @@
 [ext_resource type="Texture2D" uid="uid://dndi06qcelp65" path="res://assets/concept/art25.png" id="11_3nkoj"]
 [ext_resource type="PackedScene" uid="uid://baljtnt417hjn" path="res://active/characters/player.tscn" id="12_x6nrr"]
 [ext_resource type="Script" path="res://scripts/HomemBoiVisibleArea.gd" id="13_f7tfp"]
+[ext_resource type="Script" path="res://ChupaCabraVisibleArea.gd" id="14_3ux05"]
 [ext_resource type="PackedScene" uid="uid://dgrw8fa8v2uc4" path="res://active/enemies/chupa_cabra.tscn" id="14_j1g5c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ndt8p"]
+font = ExtResource("2_o1je0")
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_im18q"]
+font = ExtResource("2_o1je0")
+font_size = 36
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kyd0p"]
 texture = ExtResource("8_bfimy")
@@ -302,14 +313,60 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_bcuh3")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wu812"]
+radius = 497.031
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_1npt6"]
-radius = 700.0
+radius = 792.162
 
 [node name="map" type="Node2D"]
 z_as_relative = false
 y_sort_enabled = true
 
 [node name="ui-gameplay" parent="." instance=ExtResource("1_ut06q")]
+process_mode = 3
+
+[node name="Pause" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="pause-screen" type="Control" parent="Pause"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_36h68")
+
+[node name="Label" type="Label" parent="Pause/pause-screen"]
+z_index = 100
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 1064.0
+text = "Pausado"
+label_settings = SubResource("LabelSettings_ndt8p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Pause/pause-screen"]
+z_index = 100
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 1933.0
+offset_bottom = 1136.0
+text = "Pressione \"ESC\" par despausar"
+label_settings = SubResource("LabelSettings_im18q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Pause/pause-screen"]
+z_index = 99
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(48.1235, 27.1281)
+color = Color(0, 0, 0, 0.537255)
+metadata/_edit_use_anchors_ = true
 
 [node name="decoration" type="TileMap" parent="."]
 z_as_relative = false
@@ -839,20 +896,40 @@ position = Vector2(-1624, -832)
 scale = Vector2(0.643097, 0.646252)
 texture = ExtResource("11_3nkoj")
 
+[node name="ChupaCabraVisibleArea" type="Area2D" parent="."]
+position = Vector2(1080, 120)
+script = ExtResource("14_3ux05")
+
+[node name="Area" type="CollisionShape2D" parent="ChupaCabraVisibleArea"]
+position = Vector2(928, 544)
+shape = SubResource("CircleShape2D_wu812")
+debug_color = Color(0, 0.643137, 0, 0)
+
+[node name="Area2" type="CollisionShape2D" parent="ChupaCabraVisibleArea"]
+position = Vector2(371, 1344)
+shape = SubResource("CircleShape2D_wu812")
+debug_color = Color(0, 0.643137, 0, 0)
+
+[node name="Area3" type="CollisionShape2D" parent="ChupaCabraVisibleArea"]
+position = Vector2(2136, 504)
+shape = SubResource("CircleShape2D_wu812")
+debug_color = Color(0, 0.643137, 0, 0)
+
 [node name="HomemBoiVisibleArea" type="Area2D" parent="."]
 position = Vector2(1080, 120)
 script = ExtResource("13_f7tfp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HomemBoiVisibleArea"]
+[node name="Area" type="CollisionShape2D" parent="HomemBoiVisibleArea"]
 shape = SubResource("CircleShape2D_1npt6")
-debug_color = Color(0.643137, 0.521569, 0.172549, 0)
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
 
 [node name="homemboi" parent="." instance=ExtResource("10_pi57x")]
-position = Vector2(1085, 105)
+position = Vector2(1085, 104)
 scale = Vector2(1.01599, 1)
 
 [node name="player" parent="." instance=ExtResource("12_x6nrr")]
-position = Vector2(-312, -80)
+position = Vector2(-312, -78)
+scale = Vector2(0.33, 0.3)
 
 [node name="chupa_cabra" parent="." instance=ExtResource("14_j1g5c")]
 position = Vector2(2192, 824)
@@ -875,4 +952,5 @@ position = Vector2(2728, 1888)
 [node name="chupa_cabra7" parent="." instance=ExtResource("14_j1g5c")]
 position = Vector2(3087, 1872)
 
+[connection signal="body_entered" from="ChupaCabraVisibleArea" to="ChupaCabraVisibleArea" method="_on_body_entered"]
 [connection signal="body_entered" from="HomemBoiVisibleArea" to="HomemBoiVisibleArea" method="_on_body_entered"]

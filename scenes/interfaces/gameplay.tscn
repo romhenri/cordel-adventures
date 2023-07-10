@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://diytmk70tuq1n"]
+[gd_scene load_steps=8 format=3 uid="uid://diytmk70tuq1n"]
 
 [ext_resource type="Texture2D" uid="uid://cbdaiiks1h4hk" path="res://assets/icons/SVG/Ativo 2icon.svg" id="1_bldbo"]
 [ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_crjss"]
 [ext_resource type="Theme" uid="uid://62pq7o0ytldm" path="res://manegement/gameplay.tres" id="2_1x0fi"]
-
-[sub_resource type="InputEventKey" id="InputEventKey_154cs"]
-device = -1
-keycode = 4194305
+[ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="4_xa30t"]
+[ext_resource type="Texture2D" uid="uid://d0uge4st4fk63" path="res://assets/icons/icon-heat.png" id="5_warx0"]
 
 [sub_resource type="Shortcut" id="Shortcut_c8b48"]
-events = [SubResource("InputEventKey_154cs")]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x78v4"]
+font = ExtResource("4_xa30t")
+font_size = 48
+font_color = Color(0, 0, 0, 1)
 
 [node name="ui-gameplay" type="CanvasLayer"]
 layer = 0
@@ -27,3 +29,18 @@ shortcut = SubResource("Shortcut_c8b48")
 icon = ExtResource("1_bldbo")
 icon_alignment = 1
 expand_icon = true
+
+[node name="LifeCount" type="Label" parent="."]
+offset_left = 1550.0
+offset_top = 65.0
+offset_right = 1806.0
+offset_bottom = 201.0
+text = "100
+"
+label_settings = SubResource("LabelSettings_x78v4")
+horizontal_alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1836, 78)
+scale = Vector2(0.19709, 0.19709)
+texture = ExtResource("5_warx0")

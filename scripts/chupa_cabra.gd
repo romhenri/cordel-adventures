@@ -80,8 +80,6 @@ func _on_attack_area_body_entered(body):
 	body.update_health(enemy_damage)
 
 func update_health(value: int) -> void:
-	print("Damage -25")
-	
 	aux_animation.play("hit")
 	health -= value
 	

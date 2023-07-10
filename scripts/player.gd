@@ -17,7 +17,8 @@ extends CharacterBody2D
 
 func _ready():
 	attack_area_collision.rotation = 135
-
+	say("msg_pesadelo")
+	
 func _physics_process(_delta: float) -> void:
 	
 	if (time_to_clear_dialogue > 0):
@@ -81,6 +82,12 @@ func say(msg):
 		"msg_doi":
 			dialogue.text = "Essa peste dói demais"
 		
+		"msg_pesadelo":
+			dialogue.text = "Pesadelo toda hora"
+		
+		"msg_danado":
+			dialogue.text = "Que danado é isso?"
+		
 		"":
 			dialogue.text = ""
 	
@@ -96,6 +103,7 @@ func _on_animation_finished(anim_name):
 func update_health(value: int) -> void:
 	aux_animation.play("hit")
 	Player.health -= value
+	get_parent().get_node("ui-gameplay").update()
 	
 	#Player.health = Player.health
 	#get_tree().call_group("level", "update_health", player_health)
