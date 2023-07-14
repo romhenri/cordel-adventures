@@ -136,7 +136,7 @@ position = Vector2(1039.7, 433.044)
 scale = Vector2(0.398446, 0.386984)
 texture = ExtResource("10_4j8ay")
 
-[node name="Obrabo" type="Sprite2D" parent="."]
+[node name="test-Antonio" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1692, 808)
 scale = Vector2(0.185794, 0.155471)
