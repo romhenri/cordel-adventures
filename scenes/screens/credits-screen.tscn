@@ -41,7 +41,7 @@ keycode = 4194305
 events = [SubResource("InputEventKey_55w1y")]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a4qb6"]
-font_size = 32
+font_size = 28
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yqhj2"]
@@ -209,7 +209,9 @@ Samantha Dantas Medeiros
 
 História:
 Armando Matheus Duarte da Silva
-Wendy Naely Silva de Melo"
+Wendy Naely Silva de Melo
+
+Inspiração no Artista : Lafaete Rocha"
 label_settings = SubResource("LabelSettings_a4qb6")
 horizontal_alignment = 1
 

@@ -1,11 +1,90 @@
-[gd_scene load_steps=12 format=3 uid="uid://bt8utnw3dvmdt"]
+[gd_scene load_steps=18 format=3 uid="uid://bt8utnw3dvmdt"]
 
 [ext_resource type="Script" path="res://scripts/death-screen.gd" id="1_fsomm"]
 [ext_resource type="Texture2D" uid="uid://dulhuakoxq3r0" path="res://assets/backgrounds/bg-default.jpg" id="3_5em50"]
 [ext_resource type="Texture2D" uid="uid://kjni2wm8w5we" path="res://assets/backgrounds/bg-night.png" id="3_rq83y"]
 [ext_resource type="Texture2D" uid="uid://dnkevnkdv6f35" path="res://scenes/screens/assets/death-screen/urubu-removebg-preview.png" id="4_opgdq"]
 [ext_resource type="Texture2D" uid="uid://b6bj60tb8aj3d" path="res://scenes/screens/assets/death-screen/lapide-removebg-preview (2).png" id="5_anfd1"]
+[ext_resource type="Texture2D" uid="uid://bwy2kfhx4sxvd" path="res://scenes/screens/assets/death-screen/vulture-sprite.png" id="6_x46wo"]
 [ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/cordel-encarnado II.otf" id="6_xi03w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s65m3"]
+atlas = ExtResource("6_x46wo")
+region = Rect2(0, 0, 1037, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jew6e"]
+atlas = ExtResource("6_x46wo")
+region = Rect2(1037, 0, 1037, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6185q"]
+atlas = ExtResource("6_x46wo")
+region = Rect2(2074, 0, 1037, 327)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stgxt"]
+atlas = ExtResource("6_x46wo")
+region = Rect2(3111, 0, 1037, 327)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dnvm4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s65m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jew6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6185q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stgxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s65m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jew6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6185q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stgxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s65m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s65m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jew6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6185q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stgxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s65m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s65m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jew6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6185q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s65m3")
+}],
+"loop": false,
+"name": &"new_animation",
+"speed": 10.0
+}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r33o1"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -45,7 +124,7 @@ format = 2
 
 [node name="BackgroundCordel" type="Sprite2D" parent="TileMap/TileMap"]
 position = Vector2(574, 317)
-scale = Vector2(0.255689, 0.255689)
+scale = Vector2(0.306, 0.306)
 texture = ExtResource("3_5em50")
 
 [node name="Urubu-removebg-preview" type="Sprite2D" parent="TileMap/TileMap"]
@@ -54,10 +133,20 @@ rotation = 0.282349
 texture = ExtResource("4_opgdq")
 
 [node name="Lapide-removebg-preview(2)" type="Sprite2D" parent="TileMap/TileMap"]
-position = Vector2(939, 422)
+position = Vector2(994, 457)
 rotation = -0.0152096
 scale = Vector2(0.807305, 0.807305)
 texture = ExtResource("5_anfd1")
+
+[node name="Vult" type="AnimatedSprite2D" parent="TileMap/TileMap"]
+visible = false
+position = Vector2(518, 181)
+scale = Vector2(0.788226, 0.788226)
+sprite_frames = SubResource("SpriteFrames_dnvm4")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame = 17
+frame_progress = 1.0
 
 [node name="Botoes" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -84,7 +173,7 @@ theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_fonts/font = ExtResource("6_xi03w")
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxFlat_r33o1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xco8w")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_053ve")
@@ -100,7 +189,7 @@ theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_fonts/font = ExtResource("6_xi03w")
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_r33o1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xco8w")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_053ve")
