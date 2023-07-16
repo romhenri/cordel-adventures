@@ -22,5 +22,5 @@ func _on_damage_area_body_entered(body):
 	player_ref = body
 
 func _on_damage_area_body_exited(body):
-	body.move_speed = 356
+	body.move_speed = 306
 	player_ref = null

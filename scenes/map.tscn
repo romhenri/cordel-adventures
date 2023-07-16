@@ -59,6 +59,8 @@ texture_region_size = Vector2i(50, 50)
 
 [sub_resource type="TileSet" id="TileSet_kr88b"]
 tile_size = Vector2i(64, 64)
+custom_data_layer_0/name = " "
+custom_data_layer_0/type = 0
 sources/0 = SubResource("TileSetAtlasSource_kyd0p")
 sources/1 = SubResource("TileSetAtlasSource_q27qt")
 
