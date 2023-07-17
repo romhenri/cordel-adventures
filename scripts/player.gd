@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var is_alive: bool = true
 
 @onready var texture: Sprite2D = get_node("Texture")
+@onready var trailtexture: Sprite2D = get_node("Texture/TrailTexture")
 @onready var collision: CollisionShape2D = get_node("Collision")
 @onready var animation: AnimationPlayer = get_node("Animation")
 @onready var aux_animation: AnimationPlayer = get_node("AuxAnimation")
@@ -46,10 +47,14 @@ func move() -> void:
 		pass
 	elif (direction.x > 0): 
 		texture.flip_h = false
+		trailtexture.flip_h = false
+		trailtexture.offset = Vector2(462,-200)
 		attack_area_collision.rotation = 135
 		
 	elif (direction.x < 0):
 		texture.flip_h = true
+		trailtexture.flip_h = true
+		trailtexture.offset = Vector2(-462,-200)
 		attack_area_collision.rotation = 0
 		
 	
