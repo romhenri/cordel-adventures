@@ -205,6 +205,23 @@ tracks/7/keys = {
 "values": [ExtResource("4_28vn4"), null]
 }
 
+[sub_resource type="Animation" id="Animation_uvo0w"]
+resource_name = "blink-ide"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [20, 21, 22]
+}
+
 [sub_resource type="Animation" id="Animation_y75dc"]
 resource_name = "fast-run"
 length = 0.7
@@ -364,23 +381,6 @@ tracks/3/keys = {
 "values": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 }
 
-[sub_resource type="Animation" id="Animation_uvo0w"]
-resource_name = "blink-ide"
-length = 0.4
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Texture:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [20, 21, 22]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ipph"]
 _data = {
 "RESET": SubResource("Animation_iccqh"),
@@ -475,7 +475,6 @@ disabled = true
 debug_color = Color(0.607843, 0.529412, 0.278431, 0)
 
 [node name="Texture" type="Sprite2D" parent="."]
-visible = false
 z_as_relative = false
 y_sort_enabled = true
 scale = Vector2(1.04049, 0.981739)
@@ -489,11 +488,10 @@ frame = 1
 z_as_relative = false
 y_sort_enabled = true
 scale = Vector2(1.04049, 0.981739)
-texture = ExtResource("4_28vn4")
 offset = Vector2(462, -200)
 hframes = 10
 vframes = 4
-frame = 34
+frame = 36
 
 [node name="Camera" type="Camera2D" parent="."]
 
