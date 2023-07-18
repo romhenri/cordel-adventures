@@ -3,6 +3,16 @@ extends CharacterBody2D
 @onready var time_to_clear_dialogue: int = 25
 @onready var player_damage: int = 25
 
+@onready var inventory_itens: int = 0
+@onready var sprites = [
+	preload("res://assets/characters/antonio-sprites/sprites_hand (20230716084724).png"),
+	preload("res://assets/characters/antonio-sprites/sprites_weapon (20230716084906).png"),
+	preload("res://assets/characters/antonio-sprites/sprites_light (20230716085121).png"),
+	preload("res://assets/characters/antonio-sprites/sprites_hand_hat (20230716084939).png"),
+	preload("res://assets/characters/antonio-sprites/sprites_weapon_hat (20230716085202).png"),
+	preload("res://assets/characters/antonio-sprites/sprites_light_hat (20230716085008).png"),
+]
+
 @onready var can_move: bool = true
 @onready var can_attack: bool = true
 @onready var is_alive: bool = true
@@ -31,6 +41,17 @@ func _physics_process(_delta: float) -> void:
 		move()
 	
 	attack_handler()
+	
+	#animanition test area
+	inventory()
+
+func inventory() -> void:
+	if Input.is_action_just_pressed("inventory_test"):
+		inventory_itens = inventory_itens + 1
+		if inventory_itens == 6:
+			inventory_itens = 0
+		texture.texture = sprites[inventory_itens]
+		
 
 func attack_handler() -> void:
 	
