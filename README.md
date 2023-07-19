@@ -35,4 +35,45 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 </div>
 
+<hr>
+
+### Colaboradores
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/romhenri">
+        <img src="https://avatars.githubusercontent.com/u/123867521?v=4" width="100px;" alt="Foto do Romulo Henri no GitHub"/><br>
+        <sub>
+          <b>Rômulo Henri</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/j4marcos">
+        <img src="https://avatars.githubusercontent.com/u/28969800?v=4" width="100px;" alt="Foto do João Marcos"/><br>
+        <sub>
+          <b>João Marcos</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Teixeira007">
+        <img src="https://avatars.githubusercontent.com/u/63069432?v=4" width="100px;" alt="Foto do Vinicius Teixeira"/><br>
+        <sub>
+          <b>Vinicius Teixeira</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Edwirgess">
+        <img src="https://avatars.githubusercontent.com/u/106113740?v=4" width="100px;" alt="Foto do Edwirges"/><br>
+        <sub>
+          <b>Edwirges</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 <br>
