@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://baljtnt417hjn"]
+[gd_scene load_steps=19 format=3 uid="uid://baljtnt417hjn"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wgfch"]
 [ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="2_et2k1"]
@@ -79,10 +79,10 @@ tracks/0/path = NodePath("Texture:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.545891, 0.591783),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(-0.000900112, 0.154432, 0.3, 0.4, 0.5, 0.545891, 0.591783),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [30, 31, 32, 33, 35, 37, 38, 39]
+"values": [31, 32, 33, 35, 37, 38, 39]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -201,12 +201,29 @@ tracks/0/keys = {
 "values": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 }
 
+[sub_resource type="Animation" id="Animation_so5y7"]
+resource_name = "HIT"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [37, 38, 39]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ipph"]
 _data = {
 "RESET": SubResource("Animation_iccqh"),
 "attack": SubResource("Animation_jf2qi"),
 "blink-idle": SubResource("Animation_uvo0w"),
 "fast-run": SubResource("Animation_y75dc"),
+"hit": SubResource("Animation_so5y7"),
 "idle": SubResource("Animation_1dyjh"),
 "run": SubResource("Animation_5tpwq")
 }
