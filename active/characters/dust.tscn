@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwgplh7hoc1co"]
+
+[ext_resource type="Texture2D" uid="uid://cmntphf2lhy27" path="res://assets/characters/dust.png" id="1_oybvp"]
+
+[sub_resource type="Curve" id="Curve_iijyq"]
+_data = [Vector2(0, 0.254545), 0.0, 0.0, 0, 0, Vector2(0.373984, 0.527273), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_k3l7c"]
+curve = SubResource("Curve_iijyq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qw7a7"]
+lifetime_randomness = 0.1
+emission_shape = 1
+emission_sphere_radius = 0.4
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_curve = SubResource("CurveTexture_k3l7c")
+
+[node name="GPUParticles2D" type="GPUParticles2D"]
+z_index = -1
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(143.212, 5.57264)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_qw7a7")
+texture = ExtResource("1_oybvp")

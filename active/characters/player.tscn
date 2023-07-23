@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://baljtnt417hjn"]
+[gd_scene load_steps=18 format=3 uid="uid://baljtnt417hjn"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wgfch"]
 [ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="2_et2k1"]
+[ext_resource type="PackedScene" uid="uid://cwgplh7hoc1co" path="res://active/characters/dust.tscn" id="5_tanco"]
 [ext_resource type="Texture2D" uid="uid://bsf5nkxotk0hk" path="res://assets/characters/antonio-attack.png" id="6_oauoa"]
 [ext_resource type="Texture2D" uid="uid://d3x5xqlw5isa3" path="res://assets/characters/antonio-sprites.png" id="6_r16sq"]
 
@@ -454,6 +455,8 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_joifh")
 }
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("5_tanco")]
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_finished"]
