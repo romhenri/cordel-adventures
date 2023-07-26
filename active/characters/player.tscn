@@ -413,7 +413,6 @@ frame = 1
 [node name="AttackTrail" type="Sprite2D" parent="Texture"]
 visible = false
 position = Vector2(0, -207.114)
-scale = Vector2(1, 1)
 texture = ExtResource("4_cw4cu")
 hframes = 3
 

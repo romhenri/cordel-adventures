@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://640u0li7mx23"]
+
+[ext_resource type="Texture2D" uid="uid://bn874ce3tum5v" path="res://assets/decoration/young-cactus.png" id="1_w4qiw"]
+[ext_resource type="Script" path="res://scripts/young-cacB.gd" id="2_mvrd3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i7va1"]
+radius = 136.0
+
+[node name="young-cacB" type="Sprite2D"]
+texture = ExtResource("1_w4qiw")
+offset = Vector2(0, -70)
+hframes = 2
+frame = 1
+script = ExtResource("2_mvrd3")
+
+[node name="Collision" type="Area2D" parent="."]
+position = Vector2(0, -24)
+scale = Vector2(1, 0.392068)
+
+[node name="Area" type="CollisionShape2D" parent="Collision"]
+shape = SubResource("CircleShape2D_i7va1")
+debug_color = Color(0.811765, 0.337255, 0.607843, 0.223529)
+
+[connection signal="body_entered" from="Collision" to="." method="_on_collision_body_entered"]
+[connection signal="body_exited" from="Collision" to="." method="_on_collision_body_exited"]
