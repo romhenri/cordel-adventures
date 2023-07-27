@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3x5xqlw5isa3"
-path="res://.godot/imported/antonio-sprites.png-808b83b3b9de341f7cbc868f0c57557d.ctex"
+uid="uid://c7102sdkwft47"
+path="res://.godot/imported/antonio-sprites-2.png-e547526c4f6cea095f8b604e1ee1d6fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/antonio-sprites.png"
-dest_files=["res://.godot/imported/antonio-sprites.png-808b83b3b9de341f7cbc868f0c57557d.ctex"]
+source_file="res://assets/characters/antonio/antonio-sprites-2.png"
+dest_files=["res://.godot/imported/antonio-sprites-2.png-e547526c4f6cea095f8b604e1ee1d6fd.ctex"]
 
 [params]
 

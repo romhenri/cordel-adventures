@@ -1,14 +1,28 @@
 extends CharacterBody2D
 
+# Stats
 @export var damage: int = Player.damage
 @export var speed: int = Player.speed
 
-@onready var time_to_clear_dialogue: int = 25
+# Inventory
+@export var item: String = "default"
+@export var with_hat: bool = false
+@onready var sprites = [
+	null,
+	preload("res://assets/characters/antonio/antonio-sprites-0.png"),
+	preload("res://assets/characters/antonio/antonio-sprites-1.png"),
+	preload("res://assets/characters/antonio/antonio-sprites-2.png"),
+	preload("res://assets/characters/antonio/antonio-sprites-3.png"),
+	preload("res://assets/characters/antonio/antonio-sprites-4.png"),
+	preload("res://assets/characters/antonio/antonio-sprites-5.png"),
+]
 
+# Conditions
 @onready var can_move: bool = true
 @onready var can_attack: bool = true
 @onready var is_alive: bool = true
 
+# Objects
 @onready var texture: Sprite2D = get_node("Texture")
 @onready var attack_trail: Sprite2D = get_node("Texture/AttackTrail")
 @onready var collision: CollisionShape2D = get_node("Collision")
@@ -17,10 +31,12 @@ extends CharacterBody2D
 @onready var dialogue: Label = get_node("Dialogue")
 @onready var attack_area_collision : CollisionPolygon2D = get_node("AttackArea/Attack")
 
+@onready var time_to_clear_dialogue: int = 25
+
 func _ready():
 	attack_area_collision.rotation = 135
 	say("msg_pesadelo")
-	
+
 func _physics_process(_delta: float) -> void:
 	
 	if (time_to_clear_dialogue > 0):
@@ -28,17 +44,14 @@ func _physics_process(_delta: float) -> void:
 	if (time_to_clear_dialogue == 1):
 		dialogue.text = ""
 	
-	if can_move && can_attack:
+	if can_move:
 		move()
 	
-	attack_handler()
+	if can_attack:
+		attack_handler()
 
-func attack_handler() -> void:
-	
-	if Input.is_action_just_pressed("attack"):
-		can_attack = false
-		can_move = false
-		animation.play("attack")
+	item_handler()
+#_______________________________________________
 
 # MOVE SYSTEM
 func move() -> void:
@@ -69,6 +82,7 @@ func get_direction() -> Vector2:
 	Input.get_axis("move_left", "move_right"),
 	Input.get_axis("move_up", "move_down")
 	).normalized()
+#_______________________________________________
 
 # TALK SYSTEM
 func say(msg):
@@ -96,12 +110,20 @@ func say(msg):
 	
 	time_to_clear_dialogue = 300
 
-
+#_______________________________________________
+# COMBAT SYSTEM
 func _on_animation_finished(anim_name):
 	match anim_name:
 		"attack":
 			can_attack = true
 			can_move = true
+
+func attack_handler() -> void:
+	
+	if Input.is_action_just_pressed("attack"):
+		can_attack = false
+		can_move = false
+		animation.play("attack")
 
 func update_health(value: int) -> void:
 	aux_animation.play("hit")
@@ -114,4 +136,64 @@ func update_health(value: int) -> void:
 		Transition.death()
 
 func _on_attack_area_body_entered(body):
+	
 	body.update_health(damage)
+#_______________________________________________
+
+# ITEM SYSTEM
+func item_handler():
+	if Input.is_action_just_pressed("set1"):
+		change_item("default")
+		
+	if Input.is_action_just_pressed("set2"):
+		change_item("attack")
+		
+	if Input.is_action_just_pressed("set3"):
+		change_item("lamp")
+		
+	if Input.is_action_just_pressed("hat"):
+		if with_hat:
+			with_hat = false
+		else:
+			with_hat = true
+		change_item(item)
+
+func change_item(set):
+	match set:
+		"default":
+			item = "default"
+			can_attack = false
+			
+			if with_hat:
+				texture.texture = sprites[3]
+			else:
+				texture.texture = sprites[1]
+			
+		"attack":
+			item = "attack"
+			can_attack = true
+			
+			if with_hat:
+				texture.texture = sprites[4]
+			else:
+				texture.texture = sprites[2]
+			
+		"lamp":
+			item = "lamp"
+			can_attack = false
+			
+			if with_hat:
+				texture.texture = sprites[6]
+			else:
+				texture.texture = sprites[5]
+
+
+
+
+
+
+
+
+
+
+
