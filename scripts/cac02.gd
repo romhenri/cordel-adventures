@@ -10,7 +10,7 @@ extends Sprite2D
 func _physics_process(_delta):
 	
 	if tick_cicle == 0:
-		tick_cicle = 30
+		tick_cicle = 20
 	
 	tick_cicle -= 1
 	
@@ -21,7 +21,7 @@ func _physics_process(_delta):
 		player_ref.update_health(damage)
 
 func _on_damage_area_body_entered(body):
-	body.move_speed = 106
+	body.speed = (Player.speed / 6) 
 	
 	if is_first_time:
 		get_parent().get_parent().get_parent().get_node("player").say("msg_doi")
@@ -30,5 +30,5 @@ func _on_damage_area_body_entered(body):
 	player_ref = body
 
 func _on_damage_area_body_exited(body):
-	body.move_speed = 306
+	body.speed = Player.speed
 	player_ref = null

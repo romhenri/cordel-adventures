@@ -1,12 +1,9 @@
 extends Node2D
 
-@onready var health : int = 100
+@export var health : int = 100
+@export var speed : int = 306
+@export var damage : int = 25
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
+	print(speed / 6)
+	print(speed / 9)

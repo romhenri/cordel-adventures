@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
+@export var damage: int = Player.damage
+@export var speed: int = Player.speed
+
 @onready var time_to_clear_dialogue: int = 25
-@onready var player_damage: int = 25
 
 @onready var can_move: bool = true
 @onready var can_attack: bool = true
@@ -14,7 +16,6 @@ extends CharacterBody2D
 @onready var aux_animation: AnimationPlayer = get_node("AuxAnimation")
 @onready var dialogue: Label = get_node("Dialogue")
 @onready var attack_area_collision : CollisionPolygon2D = get_node("AttackArea/Attack")
-@export var move_speed: float = 356.0
 
 func _ready():
 	attack_area_collision.rotation = 135
@@ -60,7 +61,7 @@ func move() -> void:
 	else:
 		animation.play("idle")
 	
-	velocity = direction * move_speed
+	velocity = direction * speed
 	move_and_slide()
 
 func get_direction() -> Vector2:
@@ -113,4 +114,4 @@ func update_health(value: int) -> void:
 		Transition.death()
 
 func _on_attack_area_body_entered(body):
-	body.update_health(player_damage)
+	body.update_health(damage)

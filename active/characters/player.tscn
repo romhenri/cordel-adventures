@@ -359,7 +359,6 @@ y_sort_enabled = true
 scale = Vector2(0.297404, 0.270494)
 collision_mask = 30
 script = ExtResource("1_wgfch")
-move_speed = 306.0
 
 [node name="Dialogue" type="Label" parent="."]
 z_index = 10

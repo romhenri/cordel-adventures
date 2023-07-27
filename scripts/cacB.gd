@@ -3,7 +3,7 @@ extends Sprite2D
 @onready var player_ref = null
 @onready var tick_cicle : int = 5
 
-@export var damage : bool = 35
+@export var damage : int = 3
 
 func _physics_process(_delta):
 	if tick_cicle == 0:
@@ -18,9 +18,9 @@ func _physics_process(_delta):
 		player_ref.update_health(damage)
 
 func _on_damage_area_body_entered(body):
-	body.move_speed = 26
+	body.speed = (Player.speed / 9) 
 	player_ref = body
 
 func _on_damage_area_body_exited(body):
-	body.move_speed = 306
+	body.speed = Player.speed
 	player_ref = null
