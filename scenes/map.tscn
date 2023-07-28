@@ -1020,5 +1020,11 @@ position = Vector2(2728, 1888)
 [node name="chupa_cabra7" parent="." instance=ExtResource("14_j1g5c")]
 position = Vector2(3087, 1872)
 
+[node name="Night" type="CanvasModulate" parent="."]
+clip_children = 2
+z_index = -100
+z_as_relative = false
+scale = Vector2(1e-05, 1e-05)
+
 [connection signal="body_entered" from="ChupaCabraVisibleArea" to="ChupaCabraVisibleArea" method="_on_body_entered"]
 [connection signal="body_entered" from="HomemBoiVisibleArea" to="HomemBoiVisibleArea" method="_on_body_entered"]

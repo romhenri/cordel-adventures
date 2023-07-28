@@ -1,9 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://baljtnt417hjn"]
+[gd_scene load_steps=18 format=3 uid="uid://baljtnt417hjn"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_wgfch"]
 [ext_resource type="FontFile" uid="uid://xkrr0ijg7dce" path="res://assets/fonts/xilosa.ttf" id="2_et2k1"]
 [ext_resource type="Texture2D" uid="uid://6yu2pn0tt5em" path="res://assets/characters/antonio/antonio-sprites-1.png" id="3_eflop"]
 [ext_resource type="Texture2D" uid="uid://deb4n1a7omayu" path="res://assets/characters/antonio/attack-trail.png" id="4_cw4cu"]
+[ext_resource type="Texture2D" uid="uid://bnvy1n1jmjxtf" path="res://assets/light3.png" id="5_sc7ta"]
+[ext_resource type="Texture2D" uid="uid://dndi06qcelp65" path="res://assets/concept/art25.png" id="6_4odvt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_phesw"]
 font = ExtResource("2_et2k1")
@@ -114,6 +116,18 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PointLight2D:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(77.3359, -99.8174)]
 }
 
 [sub_resource type="Animation" id="Animation_jf2qi"]
@@ -244,6 +258,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [0, 1, 2]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PointLight2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(70.611, -96.1204), Vector2(77.3359, -99.8174), Vector2(73.4931, -97.7048)]
+}
 
 [sub_resource type="Animation" id="Animation_5tpwq"]
 resource_name = "run"
@@ -283,6 +309,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PointLight2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(174.846, -218.119), Vector2(151.309, -166.362), Vector2(50.4364, -184.847), Vector2(20.1746, -151.575), Vector2(-13.4497, -140.484), Vector2(-10.0873, -110.908), Vector2(-40.3492, -136.787), Vector2(94.148, -184.847), Vector2(121.047, -195.938), Vector2(147.947, -207.029), Vector2(174.846, -218.119)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6ipph"]
@@ -402,6 +440,27 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_joifh")
 }
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+modulate = Color(1, 1, 0.690196, 1)
+self_modulate = Color(1, 1, 0.698039, 1)
+show_behind_parent = true
+z_index = 99
+position = Vector2(77.3359, -99.8174)
+scale = Vector2(1, 1)
+color = Color(1, 0.960784, 0.811765, 0)
+energy = 2.5
+blend_mode = 2
+shadow_filter_smooth = 64.0
+texture = ExtResource("5_sc7ta")
+texture_scale = 3.0
+
+[node name="Art25" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(60.5237, -280.967)
+scale = Vector2(0.643097, 0.646252)
+texture = ExtResource("6_4odvt")
 
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
 [connection signal="animation_finished" from="Animation" to="." method="_on_animation_finished"]
