@@ -11,7 +11,8 @@ func _ready():
 func on_button_pressed(button_name: String) -> void:
 	match button_name:
 		"esc":
-			get_parent().get_node("Pause").get_node("pause-screen").pause()
+			# print(get_parent().get_node("ui-pause").get_node("pause-screen"))
+			get_parent().get_node("ui-pause").get_node("pause-screen").pause()
 
 func update():
 	life_points.text = str(Player.health)
