@@ -32,7 +32,7 @@ shapes/collision/contact_color=Color(1, 0.2, 0.101961, 0.415686)
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
+window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 

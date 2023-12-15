@@ -995,7 +995,7 @@ debug_color = Color(0.219608, 0.521569, 0.172549, 0)
 position = Vector2(1085, 104)
 scale = Vector2(1.01599, 1)
 
-[node name="player" parent="." instance=ExtResource("12_x6nrr")]
+[node name="player" parent="." groups=["players"] instance=ExtResource("12_x6nrr")]
 position = Vector2(-312, -78)
 scale = Vector2(0.33, 0.3)
 

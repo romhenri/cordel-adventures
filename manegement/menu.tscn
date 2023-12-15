@@ -224,10 +224,10 @@ text = "Sair"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1719.0
+offset_left = 1729.0
 offset_top = 1024.0
-offset_right = 1887.0
+offset_right = 1897.0
 offset_bottom = 1080.0
-text = "Beta v0.1"
+text = "Beta v1.0.2"
 label_settings = SubResource("LabelSettings_yqhj2")
 horizontal_alignment = 2

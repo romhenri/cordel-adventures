@@ -8,6 +8,8 @@ radius = 72.0
 height = 320.0
 
 [node name="cac02" type="Sprite2D"]
+position = Vector2(-0.999996, -6)
+scale = Vector2(0.566955, 0.566955)
 texture = ExtResource("1_qbf3x")
 offset = Vector2(0, -150)
 script = ExtResource("2_tyklr")
