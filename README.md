@@ -2,14 +2,14 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/romhenri/CordelAdventures?style=for-the-badge)
 
-<img src="./assets/concept/art25.png" alt="exemplo imagem">
+<img src="./assets/concept/print20do3.png" alt="exemplo imagem">
 
 > Jogo de Exploração e Aventura em um mundo inspirado na cultura Nordestina.
 
 <hr>
 
 <div display="inline">
-<img width="32.9%" src="./assets/concept/print1.png" alt="exemplo imagem">
+<img width="32.8%" src="./assets/concept/print1.png" alt="exemplo imagem">
 <img width="32.9%" src="./assets/concept/print2.png" alt="exemplo imagem">
 <img width="32.9%" src="./assets/concept/print3.png" alt="exemplo imagem">
 </div>
@@ -23,8 +23,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 -   [x] Sistema de Movimentação;
 -   [x] Sistema de Combate;
 -   [x] Sistema de Diálogo;
--   [x] Demo Jogável (09/07);
--   [ ] Publicação (01/08);
+-   [x] Demo Jogável (09/07/2023);
 
 <hr>
 
@@ -37,7 +36,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 <hr>
 
-### Colaboradores
+### Desenvolvedores
 
 <table>
   <tr>
@@ -54,6 +53,14 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
         <img src="https://avatars.githubusercontent.com/u/28969800?v=4" width="100px;" alt="Foto do João Marcos"/><br>
         <sub>
           <b>João Marcos</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/sammid37">
+        <img src="https://avatars.githubusercontent.com/u/23618006?v=4" width="100px;" alt="Foto do Samantha Medeiros no GitHub"/><br>
+        <sub>
+          <b>Samantha Medeiros</b>
         </sub>
       </a>
     </td>
