@@ -18,7 +18,10 @@ font = ExtResource("4_r0ghq")
 font_size = 164
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoga"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70wih"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khco5"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dy63"]
@@ -27,10 +30,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu43n"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khco5"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70wih"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfoga"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="InputEventKey" id="InputEventKey_55w1y"]
@@ -160,65 +160,65 @@ theme_override_constants/separation = 45
 [node name="start" type="Button" parent="buttons" groups=["buttons"]]
 layout_mode = 2
 focus_neighbor_top = NodePath("../credits")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_y76nc")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
 text = "Iniciar"
 
 [node name="config" type="Button" parent="buttons" groups=["buttons"]]
 visible = false
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_y76nc")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
 text = "Configurações"
 
 [node name="credits" type="Button" parent="buttons" groups=["buttons"]]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../start")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_y76nc")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
 text = "Créditos"
 
 [node name="quit" type="Button" parent="buttons" groups=["buttons"]]
 layout_mode = 2
 focus_neighbor_top = NodePath("../credits")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_y76nc")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
+theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5dy63")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eu43n")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_khco5")
-theme_override_styles/focus = SubResource("StyleBoxFlat_70wih")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mfoga")
 shortcut = SubResource("Shortcut_q3l2s")
 text = "Sair"
 
