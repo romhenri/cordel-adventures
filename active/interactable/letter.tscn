@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://do6bc16s862ar"]
+
+[ext_resource type="Texture2D" uid="uid://e3mdobanxffe" path="res://assets/interactable/letter.png" id="1_nimb4"]
+
+[node name="letter" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+
+[node name="texture" type="Sprite2D" parent="."]
+z_as_relative = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_nimb4")
+offset = Vector2(0, 150)
