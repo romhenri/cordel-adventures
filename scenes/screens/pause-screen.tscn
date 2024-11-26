@@ -5,7 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://cj4i5thq41gyu" path="res://scenes/screens/assets/pause-screen/placa3-fundo-claro.png" id="3_m7vhk"]
 [ext_resource type="FontFile" uid="uid://dfkkxxlsnm5be" path="res://assets/fonts/cordel-encarnado II.otf" id="3_pg8um"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rw6a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnm7t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urqfo"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tyjq"]
@@ -14,10 +17,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svx00"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urqfo"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qnm7t"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4rw6a"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="tela_de_pause" type="Control"]
@@ -70,34 +70,34 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../Sair")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_pg8um")
 theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxFlat_4rw6a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qnm7t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_urqfo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6tyjq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_svx00")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_urqfo")
-theme_override_styles/focus = SubResource("StyleBoxFlat_qnm7t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4rw6a")
 text = "Retornar"
 
 [node name="Opcoes" type="Button" parent="TileMap2/botoes"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_pg8um")
 theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxFlat_4rw6a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qnm7t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_urqfo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6tyjq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_svx00")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_urqfo")
-theme_override_styles/focus = SubResource("StyleBoxFlat_qnm7t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4rw6a")
 text = "Opcões"
 
 [node name="Sair" type="Button" parent="TileMap2/botoes"]
@@ -105,15 +105,15 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_bottom = NodePath("../Retornar")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_pg8um")
 theme_override_font_sizes/font_size = 23
-theme_override_styles/normal = SubResource("StyleBoxFlat_4rw6a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qnm7t")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_urqfo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6tyjq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_svx00")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_urqfo")
-theme_override_styles/focus = SubResource("StyleBoxFlat_qnm7t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4rw6a")
 text = "Sair"

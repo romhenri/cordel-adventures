@@ -15,6 +15,5 @@ func _physics_process(_delta):
 
 func _on_body_entered(_body):
 	if is_first_time:
-		get_parent().get_node("player").say("msg_danado")
+		get_parent().get_node("player").say_msg("msg_danado")
 		is_first_time = false
-

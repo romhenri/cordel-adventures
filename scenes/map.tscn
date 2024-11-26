@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://4xem81k2s1i"]
+[gd_scene load_steps=44 format=3 uid="uid://4xem81k2s1i"]
 
 [ext_resource type="PackedScene" uid="uid://diytmk70tuq1n" path="res://scenes/interfaces/gameplay.tscn" id="1_ut06q"]
 [ext_resource type="Texture2D" uid="uid://c2umrjaaexg8d" path="res://assets/terrain/dark-grass.png" id="2_6fvxe"]
@@ -22,6 +22,8 @@
 [ext_resource type="Script" path="res://scripts/HomemBoiVisibleArea.gd" id="13_f7tfp"]
 [ext_resource type="Script" path="res://scripts/ChupaCabraVisibleArea.gd" id="14_3ux05"]
 [ext_resource type="PackedScene" uid="uid://dgrw8fa8v2uc4" path="res://active/enemies/chupa_cabra.tscn" id="14_j1g5c"]
+[ext_resource type="Script" path="res://scripts/LetterArea.gd" id="20_h3bgr"]
+[ext_resource type="Script" path="res://scripts/InteractArea.gd" id="20_qi4hf"]
 [ext_resource type="PackedScene" uid="uid://do6bc16s862ar" path="res://active/interactable/letter.tscn" id="23_sjb7d"]
 
 [sub_resource type="GDScript" id="GDScript_ivkrl"]
@@ -31,6 +33,10 @@ script/source = "extends Node2D
 func _ready():
 	var ui_pause = get_node(\"ui-pause\")
 	ui_pause.visible = true
+
+
+func _on_letter_area_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
 "
 
 [sub_resource type="LabelSettings" id="LabelSettings_ndt8p"]
@@ -924,11 +930,134 @@ position = Vector2(2136, 504)
 shape = SubResource("CircleShape2D_wu812")
 debug_color = Color(0, 0.643137, 0, 0)
 
+[node name="LetterArea" type="Area2D" parent="."]
+position = Vector2(566.133, 1196.53)
+script = ExtResource("20_h3bgr")
+msg = "Colheitas Estragando..."
+
+[node name="Area" type="CollisionShape2D" parent="LetterArea"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
 [node name="HomemBoiVisibleArea" type="Area2D" parent="."]
 position = Vector2(1080, 120)
 script = ExtResource("13_f7tfp")
 
 [node name="Area" type="CollisionShape2D" parent="HomemBoiVisibleArea"]
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="Interacts" type="Node2D" parent="."]
+position = Vector2(-987.257, -436.31)
+
+[node name="InteractArea1" type="Area2D" parent="Interacts"]
+position = Vector2(0, 3.05176e-05)
+script = ExtResource("20_qi4hf")
+msg = "Uma Árvore"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea1"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea2" type="Area2D" parent="Interacts"]
+position = Vector2(-2356.9, 982.975)
+script = ExtResource("20_qi4hf")
+msg = "Dá para passar"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea2"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea3" type="Area2D" parent="Interacts"]
+position = Vector2(-3381.9, 687.674)
+script = ExtResource("20_qi4hf")
+msg = "Dá para passar"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea3"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea4" type="Area2D" parent="Interacts"]
+position = Vector2(-3262.72, 45.9812)
+script = ExtResource("20_qi4hf")
+msg = "Dá para passar"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea4"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea5" type="Area2D" parent="Interacts"]
+position = Vector2(-2737.3, 35.7632)
+script = ExtResource("20_qi4hf")
+msg = "Dá para passar"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea5"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea6" type="Area2D" parent="Interacts"]
+position = Vector2(-2055.96, 568.123)
+script = ExtResource("20_qi4hf")
+msg = "Sou nem Doido"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea6"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea7" type="Area2D" parent="Interacts"]
+position = Vector2(-1368.65, 844.01)
+script = ExtResource("20_qi4hf")
+msg = "Sou nem Doido"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea7"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea8" type="Area2D" parent="Interacts"]
+position = Vector2(-3221.99, -418.939)
+script = ExtResource("20_qi4hf")
+msg = "Acho que Dá"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea8"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea9" type="Area2D" parent="Interacts"]
+position = Vector2(682.34, 307.563)
+script = ExtResource("20_qi4hf")
+msg = "Mais um Dia de Trabalho"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea9"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea10" type="Area2D" parent="Interacts"]
+position = Vector2(2069.86, 566.079)
+script = ExtResource("20_qi4hf")
+msg = "Estou é Louco"
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea10"]
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_1npt6")
+debug_color = Color(0.219608, 0.521569, 0.172549, 0)
+
+[node name="InteractArea11" type="Area2D" parent="Interacts"]
+position = Vector2(1429.24, 2748.65)
+script = ExtResource("20_qi4hf")
+msg = "Tão Bonito e Tão Doloroso "
+
+[node name="Area" type="CollisionShape2D" parent="Interacts/InteractArea11"]
+scale = Vector2(0.3, 0.3)
 shape = SubResource("CircleShape2D_1npt6")
 debug_color = Color(0.219608, 0.521569, 0.172549, 0)
 
@@ -970,8 +1099,32 @@ z_as_relative = false
 scale = Vector2(1e-05, 1e-05)
 
 [node name="letter" parent="." instance=ExtResource("23_sjb7d")]
-position = Vector2(565.14, 1166.9)
+position = Vector2(568.12, 1186.31)
 rotation = 0.855643
 
 [connection signal="body_entered" from="ChupaCabraVisibleArea" to="ChupaCabraVisibleArea" method="_on_body_entered"]
+[connection signal="body_entered" from="LetterArea" to="LetterArea" method="_on_body_entered"]
+[connection signal="body_exited" from="LetterArea" to="LetterArea" method="_on_body_exited"]
 [connection signal="body_entered" from="HomemBoiVisibleArea" to="HomemBoiVisibleArea" method="_on_body_entered"]
+[connection signal="body_entered" from="Interacts/InteractArea1" to="Interacts/InteractArea1" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea1" to="Interacts/InteractArea1" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea2" to="Interacts/InteractArea2" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea2" to="Interacts/InteractArea2" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea3" to="Interacts/InteractArea3" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea3" to="Interacts/InteractArea3" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea4" to="Interacts/InteractArea4" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea4" to="Interacts/InteractArea4" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea5" to="Interacts/InteractArea5" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea5" to="Interacts/InteractArea5" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea6" to="Interacts/InteractArea6" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea6" to="Interacts/InteractArea6" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea7" to="Interacts/InteractArea7" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea7" to="Interacts/InteractArea7" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea8" to="Interacts/InteractArea8" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea8" to="Interacts/InteractArea8" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea9" to="Interacts/InteractArea9" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea9" to="Interacts/InteractArea9" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea10" to="Interacts/InteractArea10" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea10" to="Interacts/InteractArea10" method="_on_body_exited"]
+[connection signal="body_entered" from="Interacts/InteractArea11" to="Interacts/InteractArea11" method="_on_body_entered"]
+[connection signal="body_exited" from="Interacts/InteractArea11" to="Interacts/InteractArea11" method="_on_body_exited"]

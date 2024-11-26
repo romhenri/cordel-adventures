@@ -17,7 +17,7 @@ func _physics_process(_delta: float) -> void:
 		dialogue.text = ""
 
 # TALK SYSTEM
-func say(msg):
+func say_msg(msg):
 	last_msg = msg
 	
 	match msg:

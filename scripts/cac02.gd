@@ -24,7 +24,7 @@ func _on_damage_area_body_entered(body):
 	body.speed = (Player.speed / 6) 
 	
 	if is_first_time:
-		get_parent().get_parent().get_parent().get_node("player").say("msg_doi")
+		get_parent().get_parent().get_parent().get_node("player").say_msg("msg_doi")
 		is_first_time = false
 	
 	player_ref = body

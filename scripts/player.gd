@@ -17,6 +17,9 @@ extends CharacterBody2D
 	preload("res://assets/characters/antonio/antonio-sprites-5.png"),
 ]
 
+@export var area: String = ""
+@export var area_msg: String = ""
+
 # Conditions
 @onready var can_move: bool = true
 @onready var can_attack: bool = true
@@ -35,7 +38,7 @@ extends CharacterBody2D
 
 func _ready():
 	attack_area_collision.rotation = 135
-	say("msg_pesadelo")
+	say_msg("msg_pesadelo")
 
 func _physics_process(_delta: float) -> void:
 	
@@ -50,6 +53,7 @@ func _physics_process(_delta: float) -> void:
 	if can_attack:
 		attack_handler()
 
+	interact_handler()
 	item_handler()
 #_______________________________________________
 
@@ -85,7 +89,7 @@ func get_direction() -> Vector2:
 #_______________________________________________
 
 # TALK SYSTEM
-func say(msg):
+func say_msg(msg):
 	match msg:
 		"msg_loucura":
 			dialogue.text = "Que loucura."
@@ -105,9 +109,19 @@ func say(msg):
 		"msg_danado":
 			dialogue.text = "Que danado é isso?"
 		
+		"msg_letter":
+			dialogue.text = "Uma carta?"
+		
+		"msg_letter1":
+			dialogue.text = "Pessoas preocupadas com a perda das colheitas"
+		
 		"":
 			dialogue.text = ""
 	
+	time_to_clear_dialogue = 300
+
+func say(msg):
+	dialogue.text = msg
 	time_to_clear_dialogue = 300
 
 #_______________________________________________
@@ -139,6 +153,11 @@ func _on_attack_area_body_entered(body):
 	
 	body.update_health(damage)
 #_______________________________________________
+
+# INTERACT SYSTEM
+func interact_handler():
+	if Input.is_action_just_pressed("interact"):
+		say(area_msg)
 
 # ITEM SYSTEM
 func item_handler():
@@ -186,14 +205,3 @@ func change_item(set):
 				texture.texture = sprites[6]
 			else:
 				texture.texture = sprites[5]
-
-
-
-
-
-
-
-
-
-
-

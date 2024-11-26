@@ -86,7 +86,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r33o1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fur7h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b116g"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xco8w"]
@@ -95,10 +98,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_053ve"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b116g"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fur7h"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r33o1"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="tela_morte" type="Control"]
@@ -167,32 +167,32 @@ text = "Fim De Jogo!"
 
 [node name="quit" type="Button" parent="Botoes" groups=["buttons"]]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xi03w")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxFlat_r33o1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fur7h")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b116g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xco8w")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_053ve")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_b116g")
-theme_override_styles/focus = SubResource("StyleBoxFlat_fur7h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r33o1")
 text = "Sair"
 
 [node name="menu" type="Button" parent="Botoes" groups=["buttons"]]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
-theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_hover_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_pressed_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_focus_color = Color(0.454902, 0.360784, 0.25098, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xi03w")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_r33o1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fur7h")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_b116g")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xco8w")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_053ve")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_b116g")
-theme_override_styles/focus = SubResource("StyleBoxFlat_fur7h")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r33o1")
 text = "Menu"

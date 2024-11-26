@@ -377,12 +377,18 @@ script = ExtResource("1_wgfch")
 [node name="Dialogue" type="Label" parent="."]
 z_index = 10
 z_as_relative = false
-offset_left = -430.391
-offset_top = -635.874
-offset_right = 429.609
-offset_bottom = -555.874
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_top = -620.0
+offset_right = 500.0
+offset_bottom = -548.0
+grow_horizontal = 2
+pivot_offset = Vector2(500, 0)
 label_settings = SubResource("LabelSettings_phesw")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 z_as_relative = false
@@ -448,7 +454,6 @@ self_modulate = Color(1, 1, 0.698039, 1)
 show_behind_parent = true
 z_index = 99
 position = Vector2(77.3359, -99.8174)
-scale = Vector2(1, 1)
 color = Color(1, 0.960784, 0.811765, 0)
 energy = 2.5
 blend_mode = 2
