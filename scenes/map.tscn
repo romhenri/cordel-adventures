@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://4xem81k2s1i"]
+[gd_scene load_steps=46 format=3 uid="uid://4xem81k2s1i"]
 
 [ext_resource type="PackedScene" uid="uid://diytmk70tuq1n" path="res://scenes/interfaces/gameplay.tscn" id="1_ut06q"]
 [ext_resource type="Texture2D" uid="uid://c2umrjaaexg8d" path="res://assets/terrain/dark-grass.png" id="2_6fvxe"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://t5v3pk82okkk" path="res://assets/decoration/rocks.png" id="3_2lglo"]
 [ext_resource type="Shader" path="res://manegement/shaders/dropshadow.gdshader" id="3_i2a6m"]
 [ext_resource type="Texture2D" uid="uid://bdj0ub8f7rimy" path="res://assets/terrain/grass.png" id="4_cskr1"]
+[ext_resource type="Theme" uid="uid://cudbh1c37h07m" path="res://assets/theme/theme1.tres" id="4_l3lla"]
 [ext_resource type="PackedScene" uid="uid://d18fksc8n28pt" path="res://active/decoration/tree2.tscn" id="5_5bjj3"]
+[ext_resource type="Theme" uid="uid://62pq7o0ytldm" path="res://manegement/gameplay.tres" id="5_8gu3f"]
 [ext_resource type="Texture2D" uid="uid://dl15p7lfk7nun" path="res://assets/terrain/void-layer.png" id="5_fveo7"]
 [ext_resource type="PackedScene" uid="uid://cfwkrkjo1xhqf" path="res://active/decoration/tree1.tscn" id="6_55smf"]
 [ext_resource type="PackedScene" uid="uid://l2ta0fsau86r" path="res://active/decoration/cacB.tscn" id="6_x0htx"]
@@ -36,6 +38,10 @@ func _ready():
 
 
 func _on_letter_area_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_menu_pressed() -> void:
 	pass # Replace with function body.
 "
 
@@ -285,7 +291,6 @@ process_mode = 3
 
 [node name="ui-pause" type="CanvasLayer" parent="."]
 process_mode = 3
-visible = false
 
 [node name="pause-screen" type="Control" parent="ui-pause"]
 process_mode = 3
@@ -295,34 +300,67 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("2_36h68")
 
-[node name="Label" type="Label" parent="ui-pause/pause-screen"]
+[node name="Title" type="Label" parent="ui-pause/pause-screen"]
 z_index = 100
 layout_mode = 0
+offset_top = -58.0
 offset_right = 1925.0
-offset_bottom = 1064.0
-text = "Pausado"
+offset_bottom = 1006.0
+text = "Calma, Pausa"
 label_settings = SubResource("LabelSettings_ndt8p")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="ui-pause/pause-screen"]
+[node name="SubTitle" type="Label" parent="ui-pause/pause-screen"]
 z_index = 100
 layout_mode = 0
 offset_left = 8.0
-offset_top = 72.0
+offset_top = -8.0
 offset_right = 1933.0
-offset_bottom = 1136.0
-text = "Pressione \"ESC\" par despausar"
+offset_bottom = 1056.0
+text = "Agonia só atrapalha o juízo."
 label_settings = SubResource("LabelSettings_im18q")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="HBoxContainer" type="HBoxContainer" parent="ui-pause/pause-screen"]
+z_index = 100
+z_as_relative = false
+layout_mode = 0
+offset_left = 761.0
+offset_top = 560.0
+offset_right = 1161.0
+offset_bottom = 600.0
+theme = ExtResource("4_l3lla")
+alignment = 1
+
+[node name="Resume" type="Button" parent="ui-pause/pause-screen/HBoxContainer"]
+z_index = 100
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_8gu3f")
+text = "Continuar"
+
+[node name="Restart" type="Button" parent="ui-pause/pause-screen/HBoxContainer"]
+z_index = 100
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_8gu3f")
+text = "Reiniciar"
+
+[node name="Menu" type="Button" parent="ui-pause/pause-screen/HBoxContainer"]
+z_index = 100
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_8gu3f")
+text = "Menu"
+
 [node name="ColorRect" type="ColorRect" parent="ui-pause/pause-screen"]
 z_index = 99
-layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(48.1235, 27.1281)
+mouse_filter = 2
 color = Color(0, 0, 0, 0.537255)
 metadata/_edit_use_anchors_ = true
 
@@ -1102,6 +1140,9 @@ scale = Vector2(1e-05, 1e-05)
 position = Vector2(568.12, 1186.31)
 rotation = 0.855643
 
+[connection signal="pressed" from="ui-pause/pause-screen/HBoxContainer/Resume" to="ui-pause/pause-screen" method="_on_resume_pressed"]
+[connection signal="pressed" from="ui-pause/pause-screen/HBoxContainer/Restart" to="ui-pause/pause-screen" method="_on_restart_pressed"]
+[connection signal="pressed" from="ui-pause/pause-screen/HBoxContainer/Menu" to="ui-pause/pause-screen" method="_on_menu_pressed"]
 [connection signal="body_entered" from="ChupaCabraVisibleArea" to="ChupaCabraVisibleArea" method="_on_body_entered"]
 [connection signal="body_entered" from="LetterArea" to="LetterArea" method="_on_body_entered"]
 [connection signal="body_exited" from="LetterArea" to="LetterArea" method="_on_body_exited"]
